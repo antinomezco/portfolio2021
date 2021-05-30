@@ -1,28 +1,88 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <MainHeader />
+    <!-- <MainNav>
+      <div class="navy">
+        <router-link class="links" to="/">Home</router-link> 
+        <router-link class="links" to="/about">About</router-link> 
+        <router-link class="links" to="/mystery">Mystery</router-link>
+      </div>
+    </MainNav> -->
+    <div class="main-content"  id="about">
+      <router-view />
+    </div>
+    <!-- <Footer /> -->
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// @ is an alias to /src
+import MainHeader from "@/components/MainHeader.vue";
+// import Footer from "@/components/Footer.vue";
+// import MainNav from "@/components/MainNav.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    MainHeader,
+    // Footer
+    // MainNav,
+  },
+};
 </script>
 
 <style>
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: rgb(177,174,238);
+  background: radial-gradient(circle, rgba(177,174,238,1) 0%, rgba(178,183,189,1) 100%);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.main-content {
+  display: grid;
+  margin-top: 50px;
+  /* margin-left: 100px; */
+  padding: 1rem;
+  text-align: center;
+  place-items: center;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  position: relative;
+}
+
+.navy {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+  margin-top: 1rem
+}
+
+.links {
+  margin-bottom: 1rem;
+  opacity: 1;
+  transition: all 2s;
+}
+
+@media only screen and (max-width: 600px) {
+  .links {
+    opacity: 0;
+    transition: all .25s;
+    visibility: hidden;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main-content {
+    margin-left: 0;
+  }
 }
 </style>
