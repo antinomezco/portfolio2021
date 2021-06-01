@@ -11,21 +11,21 @@
     <div class="main-content"  id="about">
       <router-view />
     </div>
-    <!-- <Footer /> -->
+    <Footer />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import MainHeader from "@/components/MainHeader.vue";
-// import Footer from "@/components/Footer.vue";
+import Footer from "@/components/Footer.vue";
 // import MainNav from "@/components/MainNav.vue";
 
 export default {
   name: "App",
   components: {
     MainHeader,
-    // Footer
+    Footer
     // MainNav,
   },
 };
@@ -37,8 +37,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100%;
-  background: rgb(177,174,238);
-  background: radial-gradient(circle, rgba(177,174,238,1) 0%, rgba(178,183,189,1) 100%);
+  background: white;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -46,7 +45,7 @@ body {
   display: grid;
   margin-top: 50px;
   /* margin-left: 100px; */
-  padding: 1rem;
+  /* padding: 1rem; */
   text-align: center;
   place-items: center;
 }

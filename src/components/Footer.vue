@@ -1,46 +1,120 @@
 <template>
-  <div class='header'>
-    <div class="navy-header">
-      <router-link class="links-header" to="/">Home</router-link> 
-      <router-link class="links-header" to="/about">About</router-link> 
-      <router-link class="links-header" to="/mystery">Mystery</router-link>
+  <div class="footer">
+    <div class="container">
+      <div class="top">
+        <div @click="scroll()" class="footer-top-container"><img class="footer-top" src="../assets/up-arrow.png" alt=""
+        /></div> 
+      </div>
+      <div class="navy-footer">
+        <a href="https://github.com/antinomezco" target="_blank"
+          ><img class="links-footer" src="../assets/github.png" alt=""
+        /></a>
+        <a href="https://www.linkedin.com/in/constantinosaldana" target="_blank"
+          ><img class="links-footer" src="../assets/linkedin.png" to="/about"
+        /></a>
+        <a href="https://www.instagram.com/choconstant" target="_blank"
+          ><img class="links-footer" src="../assets/instagram.png" to="/mystery"
+        /></a>
+      </div>
+      <hr />
+      <div class="footer-name">
+        <p>2021 Constantino Saldana</p>
+      </div>
     </div>
   </div>
 </template>
 
+<script>
+export default {
+  methods: {
+    scroll() {  
+      document.getElementById("about").scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+  }
+}
+</script>
+
 <style scoped>
-.header {
+.footer {
   display: flex;
   align-items: center;
-  padding-left: 1rem;
-  /* background-color: grey; */
-  height: 50px;
+  /* flex-direction: column; */
+  /* padding-left: 1rem; */
+  background-color: black;
+  height: 275px;
   width: 100%;
-  position: fixed;
+  /* position: fixed; */
   bottom: 0;
 }
 
-.navy-header {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-left: 1rem;
-  padding-right: 2rem;
-  
+.container {
+  width: 20%;
+  align-items: center;
+  margin: 0 auto;
 }
 
-.links-header {
+hr {
+  margin-top: 1rem;
+  align-items: center;
+  color: #2c3e50;
+}
+
+.navy-footer {
+  /* width: 20%; */
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin: 5% auto;
+  justify-content: space-between;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.links-footer {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 110%;
-  color: black;
+  width: 40px;
+  height: 40px;
+  transition: all linear 0.1s;
 }
 
-.links-header:hover {
-  border-bottom: 2px solid #ffff01;
-  color: #ffff01;
+.footer-top-container {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-top {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.footer-top:hover {
+  transform: translateY(-2px);
+}
+
+
+/* .navy-footer:after{
+  position: relative;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: gray;
+  top: 50px;
+  left: 0;
+} */
+
+.links-footer:hover {
+  transform: translateY(-2px);
+}
+
+.footer-name {
+  text-align: center;
+  color: white;
 }
 
 /* @media only screen and (min-width: 600px) {

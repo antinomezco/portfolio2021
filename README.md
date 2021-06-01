@@ -1,5 +1,9 @@
 # clasecilla-app
 
+Issues to fix
+
+Contact button hover is incomplete
+
 ## Project setup
 ```
 npm install
