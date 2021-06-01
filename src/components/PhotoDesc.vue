@@ -6,7 +6,7 @@
         <img src="../assets/myself.jpg" />
         <div class="hero-desc">
           <p>{{ desc }}</p>
-          <div>button</div>
+          <div class="resume">Check out my resumé</div>
         </div>
       </div>
     </div>
@@ -18,7 +18,7 @@ export default {
   data() {
     return {
       desc:
-        "I'm Constantino, a trilingual (English, French and Spanish) Full Stack developer based in Montreal, specializing in web development using VueJS as a frontend alongside Django or Express as a backend, as well as a translator.",
+        "I'm Constantino, a trilingual (English, French and Spanish) Full Stack developer based in Montreal, specializing in web development using VueJS as a frontend alongside Django or Express as an API backend, as well as a translator.",
     };
   },
 };
@@ -32,9 +32,18 @@ img {
   height: 200px;
   float: left;
   margin-right: 1rem;
-  transition-duration: 5s;
+  -webkit-transition: all 0.25s ease-in;
+  -moz-transition: all 0.25s ease-in;
+  -o-transition: all 0.25s ease-in;
+  -ms-transition: all 0.25s ease-in;
 
   cursor: pointer;
+}
+img:active {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
 }
 
 p {
@@ -72,5 +81,33 @@ p {
 .who-am-i {
   font-size: 200%;
   color: purple;
+  padding-bottom: 50px;
+}
+
+.resume {
+  margin: auto;
+  width: 15%;
+  padding: 5px;
+  background: linear-gradient(to right, purple 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  border: purple solid 2px;
+  color: purple;
+  cursor: pointer;
+  transition: all ease-in 0.25s;
+  font-size: 125%;
+}
+
+.resume:hover {
+  background-position: left bottom;
+  background-color: purple;
+  color: white;
+}
+
+.resume:active {
+  transform: scale(0.99);
+  /* Scaling button to 0.98 to its original size */
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  /* Lowering the shadow */
 }
 </style>
