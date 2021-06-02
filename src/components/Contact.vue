@@ -1,7 +1,7 @@
 <template>
   <div class="contact" id="contact">
     <div class="container">
-      <h3>Contact</h3>
+      <h2>Contact</h2>
       <p>Want to work with me?</p>
       <div class="sendMessage">Send me a message</div>
     </div>
@@ -17,8 +17,9 @@ export default {
 </script>
 
 <style scoped>
-h3 {
+h2 {
   font-size: 250%;
+  font-family: "Montserrat"
 }
 
 p {
@@ -26,7 +27,7 @@ p {
   align-items: center;
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  font-size: 120%;
+  font-size: 200%;
   /* max-width: 50%; */
 }
 
@@ -36,7 +37,7 @@ p {
   clip-path: polygon(0 0, 100% 24%, 100% 100%, 0 100%);
   /* width: 100%; */
   /* padding-left: 0; */
-  padding-top: -1rem;
+  /* padding-top: -1rem; */
   /* margin-left: auto;
   margin-right: auto; */
   display: flex;

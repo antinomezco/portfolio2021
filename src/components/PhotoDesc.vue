@@ -1,7 +1,7 @@
 <template>
   <div class="hero" id="hero">
     <div class="hero-container">
-      <div class="who-am-i">Who am I?</div>
+      <h2 class="who-am-i">Who am I?</h2>
       <div>
         <img src="../assets/myself.jpg" />
         <div class="hero-desc">
@@ -18,7 +18,7 @@ export default {
   data() {
     return {
       desc:
-        "I'm Constantino, a trilingual (English, French and Spanish) Full Stack developer based in Montreal, specializing in web development using VueJS as a frontend alongside Django or Express as an backend, as well as a translator.",
+        "I'm Constantino, a trilingual (English, French and Spanish) Full Stack developer based in Montreal, specializing in web development using VueJS as a frontend alongside Django or Express as an API backend, as well as a translator.",
     };
   },
 };

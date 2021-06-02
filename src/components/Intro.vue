@@ -29,7 +29,7 @@ export default {
 }
 
 .intro-container {
-  width: 43%;
+  width: 45%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -40,7 +40,7 @@ export default {
 }
 
 .name-container {
-  font-family: Montserrat;
+  font-family: Arvo;
   font-size: 250%;
   padding-bottom: 1.5rem;
 }

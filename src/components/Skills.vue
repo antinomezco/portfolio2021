@@ -1,12 +1,12 @@
 <template>
   <div class="skills">
     <div class="skills-container">
-      <h3 class="title">
+      <h2 class="title">
         Skills
-      </h3>
-      <p>
+      </h2>
+      <h3>
         My developer and tech skills
-      </p>
+      </h3>
       <div class="skills-list-container">
         <div v-for="skill in skills" :key="skill.name" class="skills-list">
           <img :src="require(`../assets/${skill.name}.png`)" :alt="skill.alt" :title="skill.alt"/>
@@ -51,12 +51,12 @@ export default {
   font-family: Montserrat;
 }
 
-p{
+h3{
   font-family: Tahoma, Geneva, Verdana, sans-serif;
+  
 }
 
-p,.title {
-  font-size: 200%;
+h3,.title {
   color: white;
 }
 
