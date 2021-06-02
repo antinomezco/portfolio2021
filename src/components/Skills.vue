@@ -9,7 +9,7 @@
       </h3>
       <div class="skills-list-container">
         <div v-for="skill in skills" :key="skill.name" class="skills-list">
-          <img :src="require(`../assets/${skill.name}.png`)" :alt="skill.alt" :title="skill.alt"/>
+          <a target="_blank" class="skills-list" :href="skill.web"><img :src="require(`../assets/${skill.name}.png`)" :alt="skill.alt" :title="skill.alt"/></a>
         </div>
       </div>
     </div>
@@ -21,17 +21,17 @@ export default {
   data() {
     return {
       skills: [
-        { name: "js", alt: "JavaScript" },
-        { name: "html", alt: "HTML5" },
-        { name: "css", alt: "CSS3" },
-        { name: "vue", alt: "VueJS" },
-        { name: "node", alt: "NodeJS" },
-        { name: "expressjs", alt: "express" },
+        { name: "js", alt: "JavaScript", web: "https://developer.mozilla.org/en-US/docs/Glossary/JavaScript"},
+        { name: "html", alt: "HTML5", web: "https://developer.mozilla.org/en-US/docs/Glossary/HTML5"},
+        { name: "css", alt: "CSS3", web: "https://developer.mozilla.org/en-US/docs/Glossary/CSS"},
+        { name: "vue", alt: "VueJS", web: "https://vuejs.org/v2/guide/"},
+        { name: "node", alt: "NodeJS", web: "https://developer.mozilla.org/en-US/docs/Glossary/Node.js"},
+        { name: "expressjs", alt: "express", web: "https://expressjs.com/"},
         // { name: "python", alt: "Python" },
-        { name: "django", alt: "Django" },
-        { name: "prismic", alt: "Prismic" },
-        { name: "postgres", alt: "Postgres" },
-        { name: "git", alt: "git" },
+        { name: "django", alt: "Django", web: "https://learndjango.com/tutorials/what-django-python"},
+        { name: "prismic", alt: "Prismic", web: "https://prismic.io/"},
+        { name: "postgres", alt: "Postgres", web: "https://www.postgresql.org/about/"},
+        { name: "git", alt: "git", web: "https://git-scm.com/"},
       ],
     };
   },

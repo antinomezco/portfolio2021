@@ -86,7 +86,7 @@ p {
 
 .resume {
   margin: auto;
-  width: 15%;
+  width: 18%;
   padding: 5px;
   background: linear-gradient(to right, purple 50%, white 50%);
   background-size: 200% 100%;
