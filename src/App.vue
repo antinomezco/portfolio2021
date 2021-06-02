@@ -38,7 +38,7 @@ body {
   padding: 0;
   min-height: 100%;
   background: white;
-  font-family: 'Montserrat', 'VT323', 'Arvo',sans-serif;
+  font-family: 'Montserrat', 'Press Start 2P', 'Arvo',sans-serif;
 }
 
 .main-content {

@@ -114,10 +114,10 @@ h3 {
 
 img {
   margin-top: 2rem;
-  margin-left: 10rem;
+  margin-left: 4rem;
   height: 275px;
   width: 450px;
-  border-radius: 5%;
+  border-radius: 1%;
   box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
@@ -155,8 +155,8 @@ img:active {
 }
 
 .live-demo, .source-code {
-  font-family: VT323;
-  font-size: 150%;
+  font-family: "Press Start 2P";
+  font-size: 90%;
 }
 
 .source-code {
