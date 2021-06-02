@@ -4,12 +4,24 @@
       <div class="name-container">
         Hello, my name is <span class="name">Constantino Saldana</span>, web developer.
       </div>
-      <div class="starship-troopers">
+      <div class="starship-troopers" @click="scroll()">
         Would you like to know more?
       </div>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    scroll() {  
+      document.getElementById("hero").scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+  }
+}
+</script>
 
 <style scoped>
 .intro {

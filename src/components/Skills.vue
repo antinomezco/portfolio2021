@@ -5,7 +5,7 @@
         Skills
       </h3>
       <p>
-        My developer, tech and language skills
+        My developer and tech skills
       </p>
       <div class="skills-list-container">
         <div v-for="skill in skills" :key="skill.name" class="skills-list">
@@ -40,13 +40,13 @@ export default {
 
 <style scoped>
 .skills {
-  background-color: purple;
-  padding: 200px 0;
+  background-color: orange;
+  padding: 200px 0 100px;
   clip-path: polygon(0 22%, 100% 0%, 100% 100%, 0 100%);
 }
 
 .title {
-  margin-bottom: 5rem;
+  margin-bottom: 1rem;
   font-size: 200%;
   font-family: Montserrat;
 }
@@ -56,6 +56,7 @@ p{
 }
 
 p,.title {
+  font-size: 200%;
   color: white;
 }
 

@@ -59,7 +59,7 @@ p {
 .hero {
   width: 100%;
   background-color: black;
-  padding-bottom: 150px;
+  padding-bottom: 200px;
   padding-top: 100px;
   clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 79%);
 }
