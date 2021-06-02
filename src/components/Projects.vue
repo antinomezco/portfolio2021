@@ -56,7 +56,7 @@ export default {
           title: "Quasargram",
           link: "https://quasargram-89a89.firebaseapp.com/#/",
           img: "",
-          tech: "Quasar (Vuejs, Express, NodeJS, Firebase",
+          tech: "Quasar (Vuejs), Express, NodeJS, Firebase",
           desc:
             "Simple Instagram look-alike page using a Vuejs (with Quasar) NodeJS Express. Allows for uploading of photos from the local file system or from the device's webcam if available. Features pending: multi-users, authentication through Auth0, deletion of posts",
         },
@@ -107,6 +107,9 @@ export default {
 
 h3 {
   margin-bottom: 5rem;
+  font-size: 200%;
+  font-family: Montserrat;
+  color: purple;
 }
 
 img {
@@ -151,6 +154,11 @@ img:active {
   /* Lowering the shadow */
 }
 
+.live-demo, .source-code {
+  font-family: VT323;
+  font-size: 150%;
+}
+
 .source-code {
   color: purple;
   cursor: pointer;
@@ -168,6 +176,7 @@ img:active {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-left: -2rem;
 }
 
 .text-desc {
@@ -186,6 +195,8 @@ img:active {
 }
 
 .project-title {
-  font-size: 150%
+  font-size: 150%;
+  font-family: "Montserrat";
+  color: purple;
 }
 </style>

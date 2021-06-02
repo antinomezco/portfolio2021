@@ -18,7 +18,7 @@ export default {
   data() {
     return {
       desc:
-        "I'm Constantino, a trilingual (English, French and Spanish) Full Stack developer based in Montreal, specializing in web development using VueJS as a frontend alongside Django or Express as an API backend, as well as a translator.",
+        "I'm Constantino, a trilingual (English, French and Spanish) Full Stack developer based in Montreal, specializing in web development using VueJS as a frontend alongside Django or Express as an backend, as well as a translator.",
     };
   },
 };
@@ -40,10 +40,10 @@ img {
   cursor: pointer;
 }
 img:active {
-  -webkit-transform: rotate(360deg);
-  -moz-transform: rotate(360deg);
-  -o-transform: rotate(360deg);
-  -ms-transform: rotate(360deg);
+  -webkit-transform: rotate(330deg);
+  -moz-transform: rotate(330deg);
+  -o-transform: rotate(330deg);
+  -ms-transform: rotate(330deg);
 }
 
 p {
@@ -60,12 +60,11 @@ p {
   width: 100%;
   background-color: black;
   padding-bottom: 150px;
+  padding-top: 100px;
   clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 79%);
 }
 
 .hero-container {
-  padding-top: 300px;
-
   max-width: 50%;
   margin-left: auto;
   margin-right: auto;
@@ -82,6 +81,7 @@ p {
   font-size: 200%;
   color: purple;
   padding-bottom: 50px;
+  font-family: Montserrat;
 }
 
 .resume {

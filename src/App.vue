@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <MainHeader />
+    <!-- <MainHeader /> -->
     <!-- <MainNav>
       <div class="navy">
         <router-link class="links" to="/">Home</router-link> 
@@ -17,14 +17,14 @@
 
 <script>
 // @ is an alias to /src
-import MainHeader from "@/components/MainHeader.vue";
+// import MainHeader from "@/components/MainHeader.vue";
 import Footer from "@/components/Footer.vue";
 // import MainNav from "@/components/MainNav.vue";
 
 export default {
   name: "App",
   components: {
-    MainHeader,
+    // MainHeader,
     Footer
     // MainNav,
   },
@@ -38,7 +38,7 @@ body {
   padding: 0;
   min-height: 100%;
   background: white;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', 'VT323', sans-serif;
 }
 
 .main-content {
