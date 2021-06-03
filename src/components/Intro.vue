@@ -25,7 +25,7 @@ export default {
 
 <style scoped>
 .intro {
-  padding: 300px 0 250px;
+  padding: 300px 0 350px;
 }
 
 .intro-container {

@@ -62,7 +62,7 @@ p {
 .sendMessage:hover {
   background-position: left bottom;
   background-color: purple;
-  color: black;
+  color: white;
 }
 
 .sendMessage:active {

@@ -86,7 +86,6 @@ h3 {
 
 h3,
 .title {
-  color: white;
 }
 
 .skills-list-container {
