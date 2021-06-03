@@ -132,6 +132,7 @@ and (max-device-width : 1024px) {
     padding-top: 25px;
     margin-left: auto;
     margin-right: auto;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 94%);
   }
 }
 </style>

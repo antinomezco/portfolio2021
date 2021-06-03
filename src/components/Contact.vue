@@ -81,5 +81,8 @@ p {
     margin: 0 auto;
     padding-bottom: 1rem;
   }
+  .contact {
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
+  }
 }
 </style>

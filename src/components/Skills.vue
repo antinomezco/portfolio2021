@@ -109,6 +109,10 @@ h3,
   .skills-list-container {
     width: 80%;
   }
+  .skills {
+  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
+  padding: 180px 0 100px;
+}
 }
 
 img {
