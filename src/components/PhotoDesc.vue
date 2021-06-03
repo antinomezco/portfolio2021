@@ -6,7 +6,7 @@
         <img src="../assets/myself.jpg" />
         <div class="hero-desc">
           <p>{{ desc }}</p>
-          <div class="resume">Check out my resumé</div>
+          <a class="resume" :href=cv target="_blank">Check out my resumé</a>
         </div>
       </div>
     </div>
@@ -17,6 +17,7 @@
 export default {
   data() {
     return {
+      cv: "https://drive.google.com/file/d/1VG1gZFFAmlWbDXgdbOHeiahQj92yEnyo/view?usp=sharing",
       desc:
         "I'm Constantino, a trilingual (English, French and Spanish) Full Stack developer based in Montreal, specializing in web development using VueJS as a frontend alongside Django or Express as an API backend, as well as a translator.",
     };
@@ -96,6 +97,7 @@ p {
   cursor: pointer;
   transition: all ease-in 0.25s;
   font-size: 125%;
+  text-decoration: none;
 }
 
 .resume:hover {

@@ -3,7 +3,7 @@
     <div class="container">
       <h2>Contact</h2>
       <p>Want to work with me?</p>
-      <div class="sendMessage">Send me a message</div>
+      <a :href=email class="sendMessage">Send me a message</a>
     </div>
   </div>
 </template>
@@ -11,7 +11,9 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      email: "mailto:csaldanawebdev@gmail.com"
+    };
   },
 };
 </script>
@@ -57,6 +59,7 @@ p {
   cursor: pointer;
   transition: all ease-in 0.25s;
   font-size: 125%;
+  text-decoration: none;
 }
 
 .sendMessage:hover {

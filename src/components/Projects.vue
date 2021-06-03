@@ -17,8 +17,8 @@
               </p>
             </div>
             <div class="below-text-desc">
-              <div class="live-demo">Live demo</div>
-              <div class="source-code">Source Code</div>
+              <a class="live-demo" :href=box.link target="_blank">Live demo</a>
+              <a class="source-code" :href=box.source target="_blank">Source Code</a>
             </div>
           </div>
           <div class="right-box">
@@ -46,6 +46,7 @@ export default {
           title: "Recipe Database",
           link: "https://cookingnuxt.herokuapp.com/",
           img: "",
+          source:"https://github.com/antinomezco/cookingnuxt",
           tech: "Nuxt (Vuejs + Vuetify), Django, Auth0, Firebase",
           desc:
             "Simple searchable recipe website using VueJS (with Vuetify) and Django (custom API). Dynamically created recipe pages. Authentication through Auth0, varied search, CRUD and image storage through Firebase storage buckets. Visuals and admin page are currently pending.",
@@ -56,6 +57,7 @@ export default {
           title: "Quasargram",
           link: "https://quasargram-89a89.firebaseapp.com/#/",
           img: "",
+          source:"https://github.com/antinomezco/cookingnuxt",
           tech: "Quasar (Vuejs), Express, NodeJS, Firebase",
           desc:
             "Simple Instagram look-alike page using a Vuejs (with Quasar) NodeJS Express. Allows for uploading of photos from the local file system or from the device's webcam if available. Features pending: multi-users, authentication through Auth0, deletion of posts",
@@ -140,6 +142,7 @@ img:active {
   cursor: pointer;
   transition: all ease-in 0.25s;
   font-size: 125%;
+  text-decoration: none;
 }
 
 .live-demo:hover {
@@ -164,6 +167,7 @@ img:active {
   color: purple;
   cursor: pointer;
   transition: all ease-in 0.25s;
+  text-decoration: none;
 }
 .source-code:hover {
   transform: scale(1.1);

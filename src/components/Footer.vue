@@ -91,6 +91,7 @@ hr {
   width: 25px;
   height: 25px;
   cursor: pointer;
+  transition: all linear 0.1s;
 }
 
 .footer-top:hover {

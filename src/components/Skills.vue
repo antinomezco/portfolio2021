@@ -110,4 +110,12 @@ h3,
     width: 80%;
   }
 }
+
+img {
+  transition: all linear 0.1s;
+}
+
+img:hover {
+  transform: scale(1.01);
+}
 </style>
