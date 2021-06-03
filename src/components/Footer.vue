@@ -9,12 +9,12 @@
         <a href="https://github.com/antinomezco" target="_blank"
           ><img class="links-footer" src="../assets/github.png" alt=""
         /></a>
-        <a href="https://www.linkedin.com/in/constantinosaldana" target="_blank"
+        <a href="https://www.linkedin.com/in/constantinosaldana/?locale=en_US" target="_blank"
           ><img class="links-footer" src="../assets/linkedin.png" to="/about"
         /></a>
-        <a href="https://www.instagram.com/choconstant" target="_blank"
+        <!-- <a href="https://www.instagram.com/choconstant" target="_blank"
           ><img class="links-footer" src="../assets/instagram.png" to="/mystery"
-        /></a>
+        /></a> -->
       </div>
       <hr />
       <div class="footer-name">
