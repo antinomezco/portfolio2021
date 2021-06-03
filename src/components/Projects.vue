@@ -57,7 +57,7 @@ export default {
           title: "Quasargram",
           link: "https://quasargram-89a89.firebaseapp.com/#/",
           img: "",
-          source:"https://github.com/antinomezco/cookingnuxt",
+          source:"https://github.com/antinomezco/fakestagram",
           tech: "Quasar (Vuejs), Express, NodeJS, Firebase",
           desc:
             "Simple Instagram look-alike page using a Vuejs (with Quasar) NodeJS Express. Allows for uploading of photos from the local file system or from the device's webcam if available. Features pending: multi-users, authentication through Auth0, deletion of posts",
