@@ -82,27 +82,28 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .Projects {
-  /* background-color: greenyellow; */
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* background-color: royalblue; */
-  align-items: center;
-  /* max-width: 90%; */
+  align-items: center; */
   padding-top: 10px;
-  padding-bottom: -15rem;
+  /* padding-bottom: -15rem;
   margin-left: auto;
-  margin-right: auto;
-  /* margin-bottom: 20%; */
-  /* max-width: 80%; */
+  margin-right: auto; */
 }
 
 .container {
-  width: 55%;
+  /* width: 500px;
+  margin-right: auto; 
+  margin-left: auto; */
+}
+
+.boxes {
+  /* width: 500px;
+  margin-right: auto; 
+  margin-left: auto; */
 }
 
 h3 {
@@ -150,7 +151,7 @@ img:active {
 .live-demo:active {
   transform: scale(0.99);
   /* Scaling button to 0.98 to its original size */
-  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  /* box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); */
   /* Lowering the shadow */
 }
 
@@ -188,15 +189,38 @@ img:active {
   display: flex;
   flex-direction: row;
   margin-bottom: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
 }
 
  .left-box {
-  margin-left: 5rem;
+  /* margin-left: 5rem; */
 }
 
 .project-title {
   font-size: 150%;
   font-family: "Montserrat";
   color: purple;
+}
+
+@media only screen and (max-device-width: 1024px) {
+  .full-box {
+    flex-direction: column;
+    /* margin-left: -5rem; */
+    width: 80%;
+    /* padding: 5%; */
+  }
+
+  .projects {
+    padding-top: 0;
+  }
+
+  img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    margin-left: 0;
+  }
 }
 </style>

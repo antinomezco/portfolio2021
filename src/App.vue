@@ -42,8 +42,8 @@ body {
 }
 
 .main-content {
-  display: grid;
-  margin-top: 50px;
+  /* display: grid; */
+  /* margin-top: 50px; */
   /* margin-left: 100px; */
   /* padding: 1rem; */
   text-align: center;

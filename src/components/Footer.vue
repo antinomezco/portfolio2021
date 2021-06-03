@@ -18,7 +18,7 @@
       </div>
       <hr />
       <div class="footer-name">
-        <p>2021 Constantino Saldana</p>
+        <p>© 2021 - Constantino Saldana</p>
       </div>
     </div>
   </div>
@@ -50,7 +50,7 @@ export default {
 }
 
 .container {
-  width: 20%;
+  width: 300px;
   align-items: center;
   margin: 0 auto;
 }
@@ -59,17 +59,16 @@ hr {
   margin-top: 1rem;
   align-items: center;
   color: #2c3e50;
+  /* width: 100%; */
 }
 
 .navy-footer {
-  /* width: 20%; */
+  /* width: 50%; */
+  /* margin-left: auto;
+  margin-right: auto; */
   display: flex;
-  align-items: center;
-  flex-direction: row;
-  margin: 5% auto;
-  justify-content: space-between;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  justify-content: space-evenly;
+  /* align-items: center; */
 }
 
 .links-footer {
@@ -77,6 +76,7 @@ hr {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 110%;
+  margin: 1rem 1rem;
   width: 40px;
   height: 40px;
   transition: all linear 0.1s;
@@ -97,24 +97,17 @@ hr {
   transform: translateY(-2px);
 }
 
-
-/* .navy-footer:after{
-  position: relative;
-  content: '';
-  width: 100%;
-  height: 1px;
-  background-color: gray;
-  top: 50px;
-  left: 0;
-} */
-
 .links-footer:hover {
   transform: translateY(-2px);
 }
 
 .footer-name {
   text-align: center;
-  color: white;
+  color: darkgray;
+  font-size: 75%;
+  width: 300px;
+  align-items: center;
+  margin: 0 auto;
 }
 
 /* @media only screen and (min-width: 600px) {

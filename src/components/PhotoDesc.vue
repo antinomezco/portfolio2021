@@ -2,7 +2,7 @@
   <div class="hero" id="hero">
     <div class="hero-container">
       <h2 class="who-am-i">Who am I?</h2>
-      <div>
+      <div class="who-am-i-container">
         <img src="../assets/myself.jpg" />
         <div class="hero-desc">
           <p>{{ desc }}</p>
@@ -86,7 +86,7 @@ p {
 
 .resume {
   margin: auto;
-  width: 18%;
+  width: 150px;
   padding: 5px;
   background: linear-gradient(to right, purple 50%, white 50%);
   background-size: 200% 100%;
@@ -109,5 +109,27 @@ p {
   /* Scaling button to 0.98 to its original size */
   box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
   /* Lowering the shadow */
+}
+
+@media only screen 
+and (max-device-width : 1024px) {
+  .who-am-i-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .who-am-i {
+    width: 110%;
+  }
+
+  img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero {
+    padding-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 </style>

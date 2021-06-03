@@ -47,7 +47,7 @@ p {
 
 .sendMessage {
   margin: auto;
-  width: 10%;
+  width: 200px;
   padding: 5px;
   background: linear-gradient(to right, purple 50%, white 50%);
   background-size: 200% 100%;
@@ -70,5 +70,13 @@ p {
   /* Scaling button to 0.98 to its original size */
   box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
   /* Lowering the shadow */
+}
+
+@media only screen and (max-device-width: 1024px) {
+  p {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+  }
 }
 </style>

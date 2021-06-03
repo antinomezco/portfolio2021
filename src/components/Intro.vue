@@ -62,7 +62,7 @@ export default {
 .starship-troopers:hover {
   background-position: left bottom;
   background-color: purple;
-  color: black;
+  color: white;
 }
 
 .starship-troopers:active {
@@ -70,5 +70,16 @@ export default {
   /* Scaling button to 0.98 to its original size */
   box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
   /* Lowering the shadow */
+}
+
+@media only screen 
+and (max-device-width : 1024px) {
+  .intro-container {
+    width: 75%;
+  }
+
+  .intro {
+    padding: 100px 0 0;
+  }
 }
 </style>
