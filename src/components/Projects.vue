@@ -1,8 +1,12 @@
 <template>
-  <div class="Projects" id="projects">
+  <div class="Projects" id="projects" ref="projectNameContainer">
     <div class="container">
       <h3>Projects</h3>
-      <div v-for="box in boxes" :key="box.name" class="boxes">
+      <div
+        v-for="box in boxes"
+        :key="box.name"
+        class="boxes"
+      >
         <div class="full-box">
           <div class="left-box">
             <h4 class="project-title">
@@ -17,8 +21,12 @@
               </p>
             </div>
             <div class="below-text-desc">
-              <a class="live-demo" :href=box.link target="_blank">Live demo</a>
-              <a class="source-code" :href=box.source target="_blank">Source Code</a>
+              <a class="live-demo" :href="box.link" target="_blank"
+                >Live demo</a
+              >
+              <a class="source-code" :href="box.source" target="_blank"
+                >Source Code</a
+              >
             </div>
           </div>
           <div class="right-box">
@@ -80,6 +88,44 @@ export default {
       }
       return "nothing";
     },
+  },
+  mounted() {
+    this.gsap.fromTo(this.$refs.projectNameContainer, { 
+      autoAlpha: 0,
+      x: -50,
+    },{
+      scrollTrigger: {
+      trigger: this.$refs.projectNameContainer,
+      // scrub: true,
+      start: "top center+=200px",
+      end: "top center+=100px",
+      // markers: "true",
+      // id: "test"
+    },
+      duration: 1,
+      autoAlpha: 1,
+      x: 0,
+    });
+    // gsap.fromTo();
+    const boxesAnim = this.gsap.utils.toArray('.boxes')
+    boxesAnim.forEach(box => {
+      this.gsap.fromTo(box, {
+      autoAlpha: 0,
+      x: -50,
+    },{
+      scrollTrigger: {
+      trigger: box,
+      // scrub: true,
+      start: "top center+=200px",
+      end: "top center+=100px",
+      // markers: "true",
+      // id: "test"
+    },
+      duration: 1,
+      autoAlpha: 1,
+      x: 0,
+    })
+    })
   },
 };
 </script>
@@ -158,7 +204,8 @@ img:active {
   /* Lowering the shadow */
 }
 
-.live-demo, .source-code {
+.live-demo,
+.source-code {
   font-family: "Press Start 2P";
   font-size: 90%;
 }
@@ -175,7 +222,6 @@ img:active {
 .source-code:hover:active {
   box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
-
 
 .below-text-desc {
   display: flex;
@@ -198,7 +244,7 @@ img:active {
   width: 800px;
 }
 
- .left-box {
+.left-box {
   /* margin-left: 5rem; */
 }
 

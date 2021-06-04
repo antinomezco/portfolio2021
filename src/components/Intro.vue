@@ -2,7 +2,8 @@
   <div class="intro">
     <div class="intro-container">
       <div class="name-container">
-        Hello, my name is <span class="name">Constantino Saldana</span>, web developer.
+        Hello, my name is <span class="name">Constantino Saldana</span>, web
+        developer.
       </div>
       <div class="starship-troopers" @click="scroll()">
         Would you like to know more?
@@ -12,15 +13,32 @@
 </template>
 
 <script>
+import { gsap } from "gsap";
+import { Draggable } from "gsap/Draggable";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(Draggable, ScrollTrigger);
+
 export default {
   methods: {
-    scroll() {  
+    scroll() {
       document.getElementById("skills").scrollIntoView({
-        behavior: "smooth"
+        behavior: "smooth",
       });
-    }
-  }
-}
+    },
+  },
+  // mounted() {
+  //   gsap.fromTo(".intro-container", {
+  //     scrollTrigger: ".intro-container",
+  //     autoAlpha: 0,
+  //     x: -100,
+  //   },{
+  //     duration: 1,
+  //     autoAlpha: 1,
+  //     x: 0,
+  //   });
+  // },
+};
 </script>
 
 <style scoped>
@@ -72,8 +90,7 @@ export default {
   /* Lowering the shadow */
 }
 
-@media only screen 
-and (max-device-width : 1024px) {
+@media only screen and (max-device-width: 1024px) {
   .intro-container {
     width: 75%;
   }

@@ -1,6 +1,6 @@
 <template>
   <div class="contact" id="contact">
-    <div class="container">
+    <div class="container" ref="contactContainer">
       <h2>Contact</h2>
       <p>Want to work with me?</p>
       <a :href=email class="sendMessage">Send me a message</a>
@@ -14,6 +14,25 @@ export default {
     return {
       email: "mailto:csaldanawebdev@gmail.com"
     };
+  },
+  mounted() {
+    this.gsap.fromTo(this.$refs.contactContainer, { 
+      autoAlpha: 0,
+      x: -50,
+    },{
+      scrollTrigger: {
+      trigger: this.$refs.contactContainer,
+      // scrub: true,
+      start: "top center+=200px",
+      end: "top center+=100px",
+      // markers: "true",
+      // id: "test"
+    },
+      duration: 1,
+      autoAlpha: 1,
+      x: 0,
+    });
+    // gsap.fromTo();
   },
 };
 </script>
