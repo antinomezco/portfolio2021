@@ -2,15 +2,24 @@
   <div class="footer">
     <div class="container">
       <div class="top">
-        <div @click="scroll()" class="footer-top-container"><img class="footer-top" src="../assets/up-arrow.png" alt=""
-        /></div> 
+        <div @click="scroll()" class="footer-top-container">
+          <img class="footer-top" src="../assets/up-arrow.png" alt="" />
+        </div>
       </div>
       <div class="navy-footer">
         <a href="https://github.com/antinomezco" target="_blank"
-          ><img class="links-footer" src="../assets/github.png" alt=""
+          ><img class="links-footer" src="../assets/github.png" title="Github"
         /></a>
-        <a href="https://www.linkedin.com/in/constantinosaldana/?locale=en_US" target="_blank"
-          ><img class="links-footer" src="../assets/linkedin.png" to="/about"
+        <a
+          class="resume"
+          href="https://drive.google.com/file/d/1j8Tsc7AGqAvY_QPRSnIY-d7QFMdKAGyx/view?usp=sharing"
+          target="_blank"
+          ><img class="links-footer" src="../assets/cv.png" title="Resumé"
+        /></a>
+        <a
+          href="https://www.linkedin.com/in/constantinosaldana/?locale=en_US"
+          target="_blank"
+          ><img class="links-footer" src="../assets/linkedin.png" title="LinkedIn"
         /></a>
         <!-- <a href="https://www.instagram.com/choconstant" target="_blank"
           ><img class="links-footer" src="../assets/instagram.png" to="/mystery"
@@ -27,13 +36,13 @@
 <script>
 export default {
   methods: {
-    scroll() {  
+    scroll() {
       document.getElementById("about").scrollIntoView({
-        behavior: "smooth"
+        behavior: "smooth",
       });
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped>

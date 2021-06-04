@@ -1,5 +1,5 @@
 <template>
-  <div class="skills">
+  <div class="skills" id="skills">
     <div class="skills-container">
       <h2 class="title">
         Skills
@@ -17,6 +17,9 @@
           /></a>
         </div>
       </div>
+      <div class="who-am-i" @click="scroll()">
+          Who am I?
+        </div>
     </div>
   </div>
 </template>
@@ -64,6 +67,13 @@ export default {
       ],
     };
   },
+  methods: {
+    scroll() {  
+      document.getElementById("hero").scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+  }
 };
 </script>
 
@@ -96,6 +106,7 @@ h3,
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  padding-bottom: 2rem;
 }
 
 .skills-list {
@@ -110,9 +121,9 @@ h3,
     width: 80%;
   }
   .skills {
-  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
-  padding: 180px 0 100px;
-}
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
+    padding: 180px 0 100px;
+  }
 }
 
 img {
@@ -121,5 +132,32 @@ img {
 
 img:hover {
   transform: scale(1.01);
+}
+
+.who-am-i {
+  margin: auto;
+  width: 7%;
+  padding: 5px;
+  background: linear-gradient(to right, purple 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  border: purple solid 2px;
+  color: purple;
+  cursor: pointer;
+  transition: all ease-in 0.25s;
+  font-size: 125%;
+}
+
+.who-am-i:hover {
+  background-position: left bottom;
+  background-color: purple;
+  color: white;
+}
+
+.who-am-i:active {
+  transform: scale(0.99);
+  /* Scaling button to 0.98 to its original size */
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  /* Lowering the shadow */
 }
 </style>

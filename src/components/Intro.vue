@@ -15,7 +15,7 @@
 export default {
   methods: {
     scroll() {  
-      document.getElementById("hero").scrollIntoView({
+      document.getElementById("skills").scrollIntoView({
         behavior: "smooth"
       });
     }

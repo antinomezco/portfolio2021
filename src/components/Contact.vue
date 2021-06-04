@@ -44,7 +44,7 @@ p {
   margin-right: auto; */
   display: flex;
   flex-direction: column;
-  background-color: gray;
+  background-color: orange;
 }
 
 .sendMessage {

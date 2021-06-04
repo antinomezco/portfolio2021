@@ -6,7 +6,7 @@
         <img src="../assets/myself.jpg" />
         <div class="hero-desc">
           <p>{{ desc }}</p>
-          <a class="resume" :href=cv target="_blank">Check out my resumé</a>
+          <div class="projects-link" @click="scroll()">Check out my projects</div>
         </div>
       </div>
     </div>
@@ -17,11 +17,18 @@
 export default {
   data() {
     return {
-      cv: "https://drive.google.com/file/d/1VG1gZFFAmlWbDXgdbOHeiahQj92yEnyo/view?usp=sharing",
+      cv: "https://drive.google.com/file/d/1j8Tsc7AGqAvY_QPRSnIY-d7QFMdKAGyx/view?usp=sharing",
       desc:
         "I'm Constantino, a trilingual (English, French and Spanish) Full Stack developer based in Montreal, specializing in web development using VueJS as a frontend alongside Django or Express as an API backend, as well as a translator.",
     };
   },
+  methods: {
+    scroll() {  
+      document.getElementById("projects").scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+  }
 };
 </script>
 
@@ -85,7 +92,7 @@ p {
   font-family: Montserrat;
 }
 
-.resume {
+.projects-link {
   margin: auto;
   width: 150px;
   padding: 5px;
@@ -100,13 +107,13 @@ p {
   text-decoration: none;
 }
 
-.resume:hover {
+.projects-link:hover {
   background-position: left bottom;
   background-color: purple;
   color: white;
 }
 
-.resume:active {
+.projects-link:active {
   transform: scale(0.99);
   /* Scaling button to 0.98 to its original size */
   box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
