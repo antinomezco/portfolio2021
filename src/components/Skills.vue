@@ -1,6 +1,6 @@
 <template>
   <div class="skills" id="skills">
-    <div class="skills-container" ref="skillsContainer">
+    <div class="skills-container">
       <h2 class="title">
         Skills
       </h2>
@@ -25,13 +25,13 @@
 </template>
 
 <script>
-// import { gsap } from "gsap";
-// import { Draggable } from "gsap/Draggable";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap } from "gsap";
+import { Draggable } from "gsap/Draggable";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// gsap.registerPlugin(Draggable, ScrollTrigger);
+gsap.registerPlugin(Draggable, ScrollTrigger);
 
-// import anim from './mixin/animation.js'
+import anim from './mixin/animation.js'
 export default {
   data() {
     return {
@@ -75,7 +75,7 @@ export default {
       ],
     };
   },
-  // mixins: [anim("skills")],
+  mixins: [anim("skills")],
   methods: {
     scroll() {  
       document.getElementById("hero").scrollIntoView({
@@ -84,12 +84,12 @@ export default {
     }
   },
   mounted() {
-    this.gsap.fromTo(this.$refs.skillsContainer, { 
+    gsap.fromTo(".skills-container", { 
       autoAlpha: 0,
       x: -50,
     },{
       scrollTrigger: {
-      trigger: this.$refs.skillsContainer,
+      trigger: ".skills-container",
       // scrub: true,
       start: "top center+=200px",
       end: "top center+=100px",
@@ -100,7 +100,6 @@ export default {
       autoAlpha: 1,
       x: 0,
     });
-    // gsap.fromTo();
   },
 };
 </script>

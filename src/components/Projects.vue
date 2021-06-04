@@ -96,17 +96,13 @@ export default {
     },{
       scrollTrigger: {
       trigger: this.$refs.projectNameContainer,
-      // scrub: true,
       start: "top center+=200px",
       end: "top center+=100px",
-      // markers: "true",
-      // id: "test"
     },
       duration: 1,
       autoAlpha: 1,
       x: 0,
     });
-    // gsap.fromTo();
     const boxesAnim = this.gsap.utils.toArray('.boxes')
     boxesAnim.forEach(box => {
       this.gsap.fromTo(box, {
@@ -115,11 +111,8 @@ export default {
     },{
       scrollTrigger: {
       trigger: box,
-      // scrub: true,
       start: "top center+=200px",
       end: "top center+=100px",
-      // markers: "true",
-      // id: "test"
     },
       duration: 1,
       autoAlpha: 1,
