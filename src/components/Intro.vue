@@ -1,6 +1,6 @@
 <template>
   <div class="intro">
-    <div class="intro-container">
+    <div class="intro-container" ref="introContainer">
       <div class="name-container">
         Hello, my name is <span class="name">Constantino Saldana</span>, web
         developer.
@@ -13,12 +13,6 @@
 </template>
 
 <script>
-import { gsap } from "gsap";
-import { Draggable } from "gsap/Draggable";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(Draggable, ScrollTrigger);
-
 export default {
   methods: {
     scroll() {
@@ -27,17 +21,21 @@ export default {
       });
     },
   },
-  // mounted() {
-  //   gsap.fromTo(".intro-container", {
-  //     scrollTrigger: ".intro-container",
-  //     autoAlpha: 0,
-  //     x: -100,
-  //   },{
-  //     duration: 1,
-  //     autoAlpha: 1,
-  //     x: 0,
-  //   });
-  // },
+  mounted() {
+    this.gsap.fromTo(this.$refs.introContainer, { 
+      autoAlpha: 0,
+      x: -50,
+    },{
+      scrollTrigger: {
+      trigger: this.$refs.introContainer,
+      start: "top center+=200px",
+      end: "top center+=100px",
+    },
+      duration: 1,
+      autoAlpha: 1,
+      x: 0,
+    });
+  },
 };
 </script>
 

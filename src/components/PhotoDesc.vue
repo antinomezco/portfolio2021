@@ -1,6 +1,6 @@
 <template>
   <div class="hero" id="hero">
-    <div class="hero-container" ref="heroContainer">
+    <div class="hero-container">
       <h2 class="who-am-i">Who am I?</h2>
       <div class="who-am-i-container">
         <img src="../assets/myself.jpg" />
@@ -28,26 +28,7 @@ export default {
         behavior: "smooth"
       });
     }
-  },
-  mounted() {
-    this.gsap.fromTo(this.$refs.heroContainer, { 
-      autoAlpha: 0,
-      x: -50,
-    },{
-      scrollTrigger: {
-      trigger: this.$refs.heroContainer,
-      // scrub: true,
-      start: "top center+=200px",
-      end: "top center+=100px",
-      // markers: "true",
-      // id: "test"
-    },
-      duration: 1,
-      autoAlpha: 1,
-      x: 0,
-    });
-    // gsap.fromTo();
-  },
+  }
 };
 </script>
 
