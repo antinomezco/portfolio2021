@@ -76,30 +76,19 @@ export default {
     }
   },
   mounted() {
-    this.gsap.to(".skills-container" , {
+    this.gsap.fromTo(this.$refs.skillsContainer, { 
+      autoAlpha: 0,
+      x: -50,
+    },{
       scrollTrigger: {
       trigger: this.$refs.skillsContainer,
       start: "top center+=200px",
       end: "top center+=100px",
     },
-  borderRadius: 50,
-  x: 100,
-  scale: 1.5,
-  duration:1
-})
-    // this.gsap.fromTo(this.$refs.skillsContainer, { 
-    //   autoAlpha: 0,
-    //   x: -50,
-    // },{
-    //   scrollTrigger: {
-    //   trigger: this.$refs.skillsContainer,
-    //   start: "top center+=200px",
-    //   end: "top center+=100px",
-    // },
-    //   duration: 1,
-    //   autoAlpha: 1,
-    //   x: 0,
-    // });
+      duration: 1,
+      autoAlpha: 1,
+      x: 0,
+    });
   },
 };
 </script>
