@@ -1,7 +1,7 @@
 <template>
   <div class="skills" id="skills">
     <div class="skills-container" ref="skillsContainer">
-      <h2 class="title">
+      <h2 class="title" >
         Skills
       </h2>
       <h3>
@@ -18,8 +18,8 @@
         </div>
       </div>
       <div class="who-am-i" @click="scroll()">
-          Who am I?
-        </div>
+        Who am I?
+      </div>
     </div>
   </div>
 </template>
@@ -69,26 +69,30 @@ export default {
     };
   },
   methods: {
-    scroll() {  
+    scroll() {
       document.getElementById("hero").scrollIntoView({
-        behavior: "smooth"
+        behavior: "smooth",
       });
-    }
+    },
   },
   mounted() {
-    this.gsap.fromTo(this.$refs.skillsContainer, { 
-      autoAlpha: 0,
-      x: -50,
-    },{
-      scrollTrigger: {
-      trigger: this.$refs.skillsContainer,
-      start: "top center+=200px",
-      end: "top center+=100px",
-    },
-      duration: 1,
-      autoAlpha: 1,
-      x: 0,
-    });
+    this.gsap.fromTo(
+      this.$refs.skillsContainer,
+      {
+        autoAlpha: 0,
+        x: -50,
+      },
+      {
+        scrollTrigger: {
+          trigger: this.$refs.skillsContainer,
+          start: "top center+=200px",
+          end: "top center+=100px",
+        },
+        duration: 1,
+        autoAlpha: 1,
+        x: 0,
+      }
+    );
   },
 };
 </script>
@@ -138,7 +142,7 @@ h3,
   }
   .skills {
     clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
-    padding: 180px 0 100px;
+    padding: 60px 0 100px;
   }
 }
 
@@ -152,7 +156,7 @@ img:hover {
 
 .who-am-i {
   margin: auto;
-  width: 7%;
+  width: 110px;
   padding: 5px;
   background: linear-gradient(to right, purple 50%, white 50%);
   background-size: 200% 100%;

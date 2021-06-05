@@ -94,6 +94,7 @@ hr {
 .footer-top-container {
   display: flex;
   justify-content: center;
+  padding-bottom: 1rem;
 }
 
 .footer-top {

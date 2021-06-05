@@ -94,7 +94,7 @@ export default {
   }
 
   .intro {
-    padding: 100px 0 0;
+    padding: 175px 0;
   }
 }
 </style>

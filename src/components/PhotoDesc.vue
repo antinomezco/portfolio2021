@@ -1,14 +1,14 @@
 <template>
   <div class="hero" id="hero">
-    <div class="hero-container">
+    <div class="hero-container" ref="heroContainer">
       <h2 class="who-am-i">Who am I?</h2>
       <div class="who-am-i-container">
         <img src="../assets/myself.jpg" />
         <div class="hero-desc">
           <p>{{ desc }}</p>
-          <div class="projects-link" @click="scroll()">Check out my projects</div>
         </div>
       </div>
+      <div class="projects-link" @click="scroll()">Check out my projects</div>
     </div>
   </div>
 </template>
@@ -28,7 +28,26 @@ export default {
         behavior: "smooth"
       });
     }
-  }
+  },
+  mounted() {
+    this.gsap.fromTo(
+      this.$refs.heroContainer,
+      {
+        autoAlpha: 0,
+        x: -50,
+      },
+      {
+        scrollTrigger: {
+          trigger: this.$refs.heroContainer,
+          start: "top center+=200px",
+          end: "top center+=100px",
+        },
+        duration: 1,
+        autoAlpha: 1,
+        x: 0,
+      }
+    );
+  },
 };
 </script>
 
@@ -90,6 +109,10 @@ p {
   color: purple;
   padding-bottom: 50px;
   font-family: Montserrat;
+}
+
+.who-am-i-container {
+  padding-bottom: 3rem;
 }
 
 .projects-link {
