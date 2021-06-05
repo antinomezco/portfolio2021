@@ -59,6 +59,7 @@ img {
   height: 200px;
   float: left;
   margin-right: 1rem;
+  transform: scaleX(-1);
   -webkit-transition: all 0.25s ease-in;
   -moz-transition: all 0.25s ease-in;
   -o-transition: all 0.25s ease-in;

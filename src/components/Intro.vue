@@ -63,7 +63,7 @@ export default {
 
 .starship-troopers {
   margin: auto;
-  width: 35%;
+  width: 200px  ;
   padding: 5px;
   background: linear-gradient(to right, purple 50%, white 50%);
   background-size: 200% 100%;
@@ -88,13 +88,23 @@ export default {
   /* Lowering the shadow */
 }
 
-@media only screen and (max-device-width: 1024px) {
+@media only screen and (max-device-width: 596px) {
   .intro-container {
     width: 75%;
   }
 
   .intro {
-    padding: 175px 0;
+    padding: 150px 0;
+  }
+}
+
+@media only screen and (min-device-width: 597px) and (max-device-width:1024px) {
+  .intro-container {
+    width: 75%;
+  }
+
+  .intro {
+    padding: 200px 0;
   }
 }
 </style>

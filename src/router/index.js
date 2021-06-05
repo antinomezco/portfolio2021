@@ -35,14 +35,6 @@ const router = new VueRouter({
     if(savedPosition) {
       return savedPosition
     } else {
-      // const position = {}
-      if (to.hash) {
-        return {
-          behavior: 'smooth',
-          selector: to.hash
-        }
-        // return false;
-      }
       return { x: 0, y: 0 };
     }
   }
