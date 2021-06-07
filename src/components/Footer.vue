@@ -21,9 +21,6 @@
           target="_blank"
           ><img class="links-footer" src="../assets/linkedin.png" title="LinkedIn"
         /></a>
-        <!-- <a href="https://www.instagram.com/choconstant" target="_blank"
-          ><img class="links-footer" src="../assets/instagram.png" to="/mystery"
-        /></a> -->
       </div>
       <hr />
       <div class="footer-name">
@@ -46,38 +43,49 @@ export default {
 </script>
 
 <style scoped>
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  /* flex-direction: column; */
-  /* padding-left: 1rem; */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: black;
   height: 275px;
   width: 100%;
-  /* position: fixed; */
   bottom: 0;
 }
 
 .container {
   width: 300px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0 auto;
 }
 
 hr {
   margin-top: 1rem;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #2c3e50;
-  /* width: 100%; */
 }
 
 .navy-footer {
-  /* width: 50%; */
-  /* margin-left: auto;
-  margin-right: auto; */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
-  /* align-items: center; */
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .links-footer {
@@ -88,12 +96,18 @@ hr {
   margin: 1rem 1rem;
   width: 40px;
   height: 40px;
+  -webkit-transition: all linear 0.1s;
+  -o-transition: all linear 0.1s;
   transition: all linear 0.1s;
 }
 
 .footer-top-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-bottom: 1rem;
 }
 
@@ -101,15 +115,21 @@ hr {
   width: 25px;
   height: 25px;
   cursor: pointer;
+  -webkit-transition: all linear 0.1s;
+  -o-transition: all linear 0.1s;
   transition: all linear 0.1s;
 }
 
 .footer-top:hover {
-  transform: translateY(-2px);
+  -webkit-transform: translateY(-2px);
+      -ms-transform: translateY(-2px);
+          transform: translateY(-2px);
 }
 
 .links-footer:hover {
-  transform: translateY(-2px);
+  -webkit-transform: translateY(-2px);
+      -ms-transform: translateY(-2px);
+          transform: translateY(-2px);
 }
 
 .footer-name {
@@ -117,15 +137,9 @@ hr {
   color: darkgray;
   font-size: 75%;
   width: 300px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0 auto;
 }
-
-/* @media only screen and (min-width: 600px) {
-  .links-header {
-    opacity: 0;
-    transition: all .25s;
-    visibility: hidden;
-  }
-} */
 </style>

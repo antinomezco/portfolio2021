@@ -22,47 +22,51 @@ export default {
     },{
       scrollTrigger: {
       trigger: this.$refs.contactContainer,
-      // scrub: true,
       start: "top center+=200px",
       end: "top center+=100px",
-      // markers: "true",
-      // id: "test"
     },
       duration: 1,
       autoAlpha: 1,
       x: 0,
     });
-    // gsap.fromTo();
   },
 };
 </script>
 
 <style scoped>
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 h2 {
   font-size: 250%;
   font-family: "Montserrat"
 }
 
 p {
-  /* display: flex; */
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   font-family: "Montserrat", sans-serif;
   font-size: 200%;
-  /* max-width: 50%; */
 }
 
 .contact {
   padding-top: 100px;
   padding-bottom: 100px;
-  clip-path: polygon(0 0, 100% 24%, 100% 100%, 0 100%);
-  /* width: 100%; */
-  /* padding-left: 0; */
-  /* padding-top: -1rem; */
-  /* margin-left: auto;
-  margin-right: auto; */
+  -webkit-clip-path: polygon(0 0, 100% 24%, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 24%, 100% 100%, 0 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: orange;
 }
 
@@ -70,12 +74,16 @@ p {
   margin: auto;
   width: 200px;
   padding: 5px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, purple), color-stop(50%, white));
+  background: -o-linear-gradient(left, purple 50%, white 50%);
   background: linear-gradient(to right, purple 50%, white 50%);
   background-size: 200% 100%;
   background-position: right bottom;
   border: purple solid 2px;
   color: purple;
   cursor: pointer;
+  -webkit-transition: all ease-in 0.25s;
+  -o-transition: all ease-in 0.25s;
   transition: all ease-in 0.25s;
   font-size: 125%;
   text-decoration: none;
@@ -88,10 +96,11 @@ p {
 }
 
 .sendMessage:active {
-  transform: scale(0.99);
-  /* Scaling button to 0.98 to its original size */
-  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
-  /* Lowering the shadow */
+  -webkit-transform: scale(0.99);
+      -ms-transform: scale(0.99);
+          transform: scale(0.99);
+  -webkit-box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+          box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
 @media only screen and (max-device-width: 1024px) {
@@ -101,7 +110,8 @@ p {
     padding-bottom: 1rem;
   }
   .contact {
-    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
   }
 }
 </style>

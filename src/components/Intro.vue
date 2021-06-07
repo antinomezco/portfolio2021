@@ -40,6 +40,13 @@ export default {
 </script>
 
 <style scoped>
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .intro {
   padding: 300px 0 350px;
 }
@@ -47,8 +54,13 @@ export default {
 .intro-container {
   width: 45%;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .name {
@@ -65,12 +77,16 @@ export default {
   margin: auto;
   width: 200px  ;
   padding: 5px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, purple), color-stop(50%, white));
+  background: -o-linear-gradient(left, purple 50%, white 50%);
   background: linear-gradient(to right, purple 50%, white 50%);
   background-size: 200% 100%;
   background-position: right bottom;
   border: purple solid 2px;
   color: purple;
   cursor: pointer;
+  -webkit-transition: all ease-in 0.25s;
+  -o-transition: all ease-in 0.25s;
   transition: all ease-in 0.25s;
   font-size: 125%;
 }
@@ -82,10 +98,11 @@ export default {
 }
 
 .starship-troopers:active {
-  transform: scale(0.99);
-  /* Scaling button to 0.98 to its original size */
-  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
-  /* Lowering the shadow */
+  -webkit-transform: scale(0.99);
+      -ms-transform: scale(0.99);
+          transform: scale(0.99);
+  -webkit-box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+          box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
 @media only screen and (max-device-width: 596px) {

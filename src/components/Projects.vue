@@ -70,14 +70,8 @@ export default {
           desc:
             "Simple Instagram look-alike page using a Vuejs (with Quasar) NodeJS Express. Allows for uploading of photos from the local file system or from the device's webcam if available. Features pending: multi-users, authentication through Auth0, deletion of posts",
         },
-        // { id: 3, name: "quasargram", link: "www.google.com", img: "", desc: "" },
-        // { id: 4, name: "quasargram", link: "www.google.com", img: "", desc: "" },
-        // {id: 5, name: "testbox5", link: "www.google.com", img:""},
-        // {id: 6, name: "testbox6", link: "www.google.com", img:""},
-        // {id: 7, name: "testbox7", link: "www.google.com", img:""},
-        // {id: 8, name: "testbox8", link: "www.google.com", img:""},
-        // {id: 9, name: "testbox9", link: "www.google.com", img:""},
-        // {id: 10, name: "testbox10", link: "www.google.com", img:""},
+        // { id: 3, name: "project name", link: "www.google.com", img: "", desc: "" },
+        // { id: 4, name: "project name", link: "www.google.com", img: "", desc: "" },
       ],
     };
   },
@@ -124,27 +118,15 @@ export default {
 </script>
 
 <style scoped>
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .Projects {
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center; */
   padding-top: 10px;
-  /* padding-bottom: -15rem;
-  margin-left: auto;
-  margin-right: auto; */
-}
-
-.container {
-  /* width: 500px;
-  margin-right: auto; 
-  margin-left: auto; */
-}
-
-.boxes {
-  /* width: 500px;
-  margin-right: auto; 
-  margin-left: auto; */
 }
 
 h3 {
@@ -160,25 +142,31 @@ img {
   height: 275px;
   width: 450px;
   border-radius: 1%;
-  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+          box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
 img:active {
-  transform: scale(0.99);
+  -webkit-transform: scale(0.99);
+      -ms-transform: scale(0.99);
+          transform: scale(0.99);
 }
 
 .live-demo {
-  /* margin: auto; */
   margin-left: 3rem;
   margin-right: 6rem;
   width: auto;
   padding: 5px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, purple), color-stop(50%, white));
+  background: -o-linear-gradient(left, purple 50%, white 50%);
   background: linear-gradient(to right, purple 50%, white 50%);
   background-size: 200% 100%;
   background-position: right bottom;
   border: purple solid 2px;
   color: purple;
   cursor: pointer;
+  -webkit-transition: all ease-in 0.25s;
+  -o-transition: all ease-in 0.25s;
   transition: all ease-in 0.25s;
   font-size: 125%;
   text-decoration: none;
@@ -191,10 +179,9 @@ img:active {
 }
 
 .live-demo:active {
-  transform: scale(0.99);
-  /* Scaling button to 0.98 to its original size */
-  /* box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); */
-  /* Lowering the shadow */
+  -webkit-transform: scale(0.99);
+      -ms-transform: scale(0.99);
+          transform: scale(0.99);
 }
 
 .live-demo,
@@ -206,20 +193,32 @@ img:active {
 .source-code {
   color: purple;
   cursor: pointer;
+  -webkit-transition: all ease-in 0.25s;
+  -o-transition: all ease-in 0.25s;
   transition: all ease-in 0.25s;
   text-decoration: none;
 }
 .source-code:hover {
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 .source-code:hover:active {
-  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+          box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
 .below-text-desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-left: -2rem;
 }
 
@@ -228,17 +227,17 @@ img:active {
 }
 
 .full-box {
-  /* background-color: salmon; */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin-bottom: 5rem;
   margin-left: auto;
   margin-right: auto;
   width: 800px;
-}
-
-.left-box {
-  /* margin-left: 5rem; */
 }
 
 .project-title {
@@ -249,10 +248,11 @@ img:active {
 
 @media only screen and (max-device-width: 1024px) {
   .full-box {
-    flex-direction: column;
-    /* margin-left: -5rem; */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 80%;
-    /* padding: 5%; */
   }
 
   .projects {

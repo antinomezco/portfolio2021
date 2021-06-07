@@ -1,13 +1,5 @@
 <template>
   <div id="app">
-    <!-- <MainHeader /> -->
-    <!-- <MainNav>
-      <div class="navy">
-        <router-link class="links" to="/">Home</router-link> 
-        <router-link class="links" to="/about">About</router-link> 
-        <router-link class="links" to="/mystery">Mystery</router-link>
-      </div>
-    </MainNav> -->
     <div class="main-content"  id="about">
       <router-view />
     </div>
@@ -16,22 +8,24 @@
 </template>
 
 <script>
-// @ is an alias to /src
-// import MainHeader from "@/components/MainHeader.vue";
 import Footer from "@/components/Footer.vue";
-// import MainNav from "@/components/MainNav.vue";
 
 export default {
   name: "App",
   components: {
-    // MainHeader,
     Footer
-    // MainNav,
   },
 };
 </script>
 
 <style>
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 html,
 body {
   margin: 0;
@@ -42,10 +36,6 @@ body {
 }
 
 .main-content {
-  /* display: grid; */
-  /* margin-top: 50px; */
-  /* margin-left: 100px; */
-  /* padding: 1rem; */
   text-align: center;
   place-items: center;
 }
@@ -59,8 +49,13 @@ body {
 }
 
 .navy {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding-left: 1rem;
   margin-top: 1rem
 }
@@ -68,12 +63,16 @@ body {
 .links {
   margin-bottom: 1rem;
   opacity: 1;
+  -webkit-transition: all 2s;
+  -o-transition: all 2s;
   transition: all 2s;
 }
 
 @media only screen and (max-width: 600px) {
   .links {
     opacity: 0;
+    -webkit-transition: all .25s;
+    -o-transition: all .25s;
     transition: all .25s;
     visibility: hidden;
   }

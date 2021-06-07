@@ -98,10 +98,18 @@ export default {
 </script>
 
 <style scoped>
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .skills {
   background-color: orange;
   padding: 200px 0 100px;
-  clip-path: polygon(0 22%, 100% 0%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 22%, 100% 0%, 100% 100%, 0 100%);
+          clip-path: polygon(0 22%, 100% 0%, 100% 100%, 0 100%);
 }
 
 .title {
@@ -114,22 +122,27 @@ h3 {
   font-family: Tahoma, Geneva, Verdana, sans-serif;
 }
 
-h3,
-.title {
-}
-
 .skills-list-container {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding-bottom: 2rem;
 }
 
 .skills-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 1rem;
   width: 100px;
@@ -141,29 +154,38 @@ h3,
     width: 80%;
   }
   .skills {
-    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
     padding: 60px 0 100px;
   }
 }
 
 img {
+  -webkit-transition: all linear 0.1s;
+  -o-transition: all linear 0.1s;
   transition: all linear 0.1s;
 }
 
 img:hover {
-  transform: scale(1.01);
+  -webkit-transform: scale(1.01);
+      -ms-transform: scale(1.01);
+          transform: scale(1.01);
 }
 
 .who-am-i {
   margin: auto;
   width: 110px;
   padding: 5px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, purple), color-stop(50%, white));
+  background: -o-linear-gradient(left, purple 50%, white 50%);
   background: linear-gradient(to right, purple 50%, white 50%);
   background-size: 200% 100%;
   background-position: right bottom;
   border: purple solid 2px;
   color: purple;
   cursor: pointer;
+  -webkit-transition: all ease-in 0.25s;
+  -o-transition: all ease-in 0.25s;
   transition: all ease-in 0.25s;
   font-size: 125%;
 }
@@ -175,9 +197,10 @@ img:hover {
 }
 
 .who-am-i:active {
-  transform: scale(0.99);
-  /* Scaling button to 0.98 to its original size */
-  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
-  /* Lowering the shadow */
+  -webkit-transform: scale(0.99);
+      -ms-transform: scale(0.99);
+          transform: scale(0.99);
+  -webkit-box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+          box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 </style>
