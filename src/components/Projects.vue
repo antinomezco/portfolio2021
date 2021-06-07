@@ -30,7 +30,9 @@
             </div>
           </div>
           <div class="right-box">
-            <img :src="require(`../assets/${box.name}.png`)" alt="" />
+            <a :href="box.link" target="_blank"
+                ><img :src="require(`../assets/${box.name}.png`)" alt="" /></a
+              >
             <!-- <img src="../assets/recipe.png" alt=""> -->
           </div>
         </div>
@@ -70,8 +72,17 @@ export default {
           desc:
             "Simple Instagram look-alike page using a Vuejs (with Quasar) NodeJS Express. Allows for uploading of photos from the local file system or from the device's webcam if available. Features pending: multi-users, authentication through Auth0, deletion of posts",
         },
-        // { id: 3, name: "project name", link: "www.google.com", img: "", desc: "" },
-        // { id: 4, name: "project name", link: "www.google.com", img: "", desc: "" },
+        {
+          id: 3,
+          name: "portfolio",
+          title: "Portfolio page",
+          link: "https://www.csaldana.xyz",
+          img: "",
+          source:"https://github.com/antinomezco/portfolio2021",
+          tech: "Vuejs, Gsap",
+          desc:
+            "Simple portfolio page using only HTML, CSS, Vuejs and Gsap for the animations",
+        }
       ],
     };
   },

@@ -1,8 +1,14 @@
 # clasecilla-app
 
-Issues to fix
+Portfolio made in Vue.js, inspired by the SimpleFolio React template.
 
-Contact button hover is incomplete
+https://github.com/cobidev/simplefolio
+
+Features to add
+
+1. Add comments to code
+2. Add I18n
+3. Improve animations
 
 ## Project setup
 ```
