@@ -147,7 +147,6 @@ h3 {
   margin: 1rem;
   width: 100px;
   height: 100px;
-  align-self: flex-start;
 }
 
 @media only screen and (max-device-width: 1024px) {
@@ -165,6 +164,8 @@ img {
   -webkit-transition: all linear 0.1s;
   -o-transition: all linear 0.1s;
   transition: all linear 0.1s;
+  display: flex;
+  align-self: flex-start;
 }
 
 img:hover {
