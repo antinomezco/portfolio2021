@@ -164,8 +164,7 @@ img {
   -webkit-transition: all linear 0.1s;
   -o-transition: all linear 0.1s;
   transition: all linear 0.1s;
-  display: flex;
-  align-self: flex-start;
+  width:100px;
 }
 
 img:hover {
