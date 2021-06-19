@@ -152,6 +152,7 @@ h3 {
 @media only screen and (max-device-width: 1024px) {
   .skills-list-container {
     width: 80%;
+    justify-content: normal;
   }
   .skills {
     -webkit-clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);

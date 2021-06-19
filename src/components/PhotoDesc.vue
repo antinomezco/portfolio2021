@@ -186,13 +186,15 @@ and (max-device-width : 1024px) {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .who-am-i {
-    width: 110%;
-  }
+
 
   img {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .hero-container {
+    max-width: 80%
   }
 
   .hero {

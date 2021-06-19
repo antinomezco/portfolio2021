@@ -54,12 +54,12 @@ export default {
           id: 1,
           name: "recipe",
           title: "Recipe Database",
-          link: "https://cookingnuxt.herokuapp.com/",
+          link: "https://agitated-hermann-0d809c.netlify.app/",
           img: "",
-          source:"https://github.com/antinomezco/cookingnuxt",
-          tech: "Nuxt (Vuejs + Vuetify), Django, Auth0, Firebase",
+          source:"",
+          tech: "Vuejs, Django, Firebase",
           desc:
-            "Simple searchable recipe website using VueJS (with Vuetify) and Django (custom API). Dynamically created recipe pages. Authentication through Auth0, varied search, CRUD and image storage through Firebase storage buckets. Visuals and admin page are currently pending.",
+            "Simple searchable recipe website using VueJS and Django (custom API). Visuals, dynamically created recipe pages, authentication through Auth0, CRUD and image storage through Firebase storage buckets currently pending.",
         },
         {
           id: 2,
@@ -264,6 +264,10 @@ img:active {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 80%;
+  }
+
+  .skills-list-container {
+    justify-content: normal;
   }
 
   .projects {
