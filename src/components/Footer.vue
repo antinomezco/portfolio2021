@@ -7,19 +7,8 @@
         </div>
       </div>
       <div class="navy-footer">
-        <a href="https://github.com/antinomezco" target="_blank"
-          ><img class="links-footer" src="../assets/github.png" title="Github"
-        /></a>
-        <a
-          class="resume"
-          href="https://drive.google.com/file/d/1j8Tsc7AGqAvY_QPRSnIY-d7QFMdKAGyx/view?usp=sharing"
-          target="_blank"
-          ><img class="links-footer" src="../assets/cv.png" title="Resumé"
-        /></a>
-        <a
-          href="https://www.linkedin.com/in/constantinosaldana/?locale=en_US"
-          target="_blank"
-          ><img class="links-footer" src="../assets/linkedin.png" title="LinkedIn"
+        <a :href=bottomLink.href target="_blank" v-for="bottomLink in bottomLinks" :key=bottomLink.title
+          ><img class="links-footer" :src="require(`../assets/${bottomLink.srcImage}.png`)" :title=bottomLink.title
         /></a>
       </div>
       <hr />
@@ -32,6 +21,15 @@
 
 <script>
 export default {
+  data() {
+    return { 
+      bottomLinks: [
+        {title: "Github", srcImage: "github", href: "https://github.com/antinomezco"},
+        {title: "Resumé", srcImage: "cv", href: "https://drive.google.com/file/d/1j8Tsc7AGqAvY_QPRSnIY-d7QFMdKAGyx/view?usp=sharing"},
+        {title: "LinkedIn", srcImage: "linkedin", href: "https://www.linkedin.com/in/constantinosaldana/?locale=en_US"},
+      ]
+    }
+  },
   methods: {
     scroll() {
       document.getElementById("about").scrollIntoView({
@@ -83,6 +81,7 @@ hr {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-direction: row;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
