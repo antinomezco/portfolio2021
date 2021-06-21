@@ -1,6 +1,6 @@
 <template>
   <div class="hero" id="hero">
-    <div class="hero-container" ref="heroContainer">
+    <div class="hero-container" ref="animation">
       <h2 class="who-am-i">Who am I?</h2>
       <div class="who-am-i-container">
         <img src="../assets/myself.jpg" />
@@ -14,39 +14,21 @@
 </template>
 
 <script>
+import { animation } from "./mixins/animation";
 export default {
+  mixins: [animation],
   data() {
     return {
       cv: "https://drive.google.com/file/d/1j8Tsc7AGqAvY_QPRSnIY-d7QFMdKAGyx/view?usp=sharing",
-      desc:
-        "I'm Constantino, a trilingual (English, French and Spanish) Full Stack developer based in Montreal, specializing in web development using VueJS as a frontend alongside Django or Express as an API backend, as well as a translator.",
+      desc: "I'm Constantino, a trilingual (English, French and Spanish) Full Stack developer based in Montreal, specializing in web development using VueJS as a frontend alongside Django or Express as an API backend, as well as a translator.",
     };
   },
   methods: {
-    scroll() {  
+    scroll() {
       document.getElementById("projects").scrollIntoView({
-        behavior: "smooth"
+        behavior: "smooth",
       });
-    }
-  },
-  mounted() {
-    this.gsap.fromTo(
-      this.$refs.heroContainer,
-      {
-        autoAlpha: 0,
-        x: -50,
-      },
-      {
-        scrollTrigger: {
-          trigger: this.$refs.heroContainer,
-          start: "top center+=200px",
-          end: "top center+=100px",
-        },
-        duration: 1,
-        autoAlpha: 1,
-        x: 0,
-      }
-    );
+    },
   },
 };
 </script>
@@ -67,8 +49,8 @@ img {
   float: left;
   margin-right: 1rem;
   -webkit-transform: scaleX(-1);
-      -ms-transform: scaleX(-1);
-          transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  transform: scaleX(-1);
   -webkit-transition: all 0.25s ease-in;
   -moz-transition: all 0.25s ease-in;
   -o-transition: all 0.25s ease-in;
@@ -89,8 +71,8 @@ p {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-family: "Montserrat", sans-serif;
   font-size: 120%;
   color: white;
@@ -103,7 +85,7 @@ p {
   padding-bottom: 200px;
   padding-top: 100px;
   -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 79%);
-          clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 79%);
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 79%);
 }
 
 .hero-container {
@@ -115,8 +97,8 @@ p {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .hero-desc {
@@ -125,8 +107,8 @@ p {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .who-am-i {
@@ -144,7 +126,13 @@ p {
   margin: auto;
   width: 150px;
   padding: 5px;
-  background: -webkit-gradient(linear, left top, right top, color-stop(50%, purple), color-stop(50%, white));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(50%, purple),
+    color-stop(50%, white)
+  );
   background: -o-linear-gradient(left, purple 50%, white 50%);
   background: linear-gradient(to right, purple 50%, white 50%);
   background-size: 200% 100%;
@@ -167,26 +155,24 @@ p {
 
 .projects-link:active {
   -webkit-transform: scale(0.99);
-      -ms-transform: scale(0.99);
-          transform: scale(0.99);
+  -ms-transform: scale(0.99);
+  transform: scale(0.99);
   /* Scaling button to 0.98 to its original size */
   -webkit-box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
-          box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
   /* Lowering the shadow */
 }
 
-@media only screen 
-and (max-device-width : 1024px) {
+@media only screen and (max-device-width: 1024px) {
   .who-am-i-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
-
 
   img {
     margin-left: auto;
@@ -194,7 +180,7 @@ and (max-device-width : 1024px) {
   }
 
   .hero-container {
-    max-width: 80%
+    max-width: 80%;
   }
 
   .hero {
@@ -202,7 +188,7 @@ and (max-device-width : 1024px) {
     margin-left: auto;
     margin-right: auto;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 94%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 94%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 94%);
   }
 }
 </style>

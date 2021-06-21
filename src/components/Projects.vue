@@ -1,12 +1,8 @@
 <template>
-  <div class="Projects" id="projects" ref="projectNameContainer">
+  <div class="Projects" id="projects" ref="animation">
     <div class="container">
       <h3>Projects</h3>
-      <div
-        v-for="box in boxes"
-        :key="box.name"
-        class="boxes"
-      >
+      <div v-for="box in boxes" :key="box.name" class="boxes">
         <div class="full-box">
           <div class="left-box">
             <h4 class="project-title">
@@ -31,8 +27,8 @@
           </div>
           <div class="right-box">
             <a :href="box.link" target="_blank"
-                ><img :src="require(`../assets/${box.name}.png`)" alt="" /></a
-              >
+              ><img :src="require(`../assets/${box.name}.png`)" alt=""
+            /></a>
             <!-- <img src="../assets/recipe.png" alt=""> -->
           </div>
         </div>
@@ -42,8 +38,10 @@
 </template>
 
 <script>
+import { animation } from "./mixins/animation";
 export default {
   name: "ProjectsWorld",
+  mixins: [animation],
   props: {
     msg: String,
   },
@@ -56,10 +54,9 @@ export default {
           title: "Recipe Database",
           link: "https://agitated-hermann-0d809c.netlify.app/",
           img: "",
-          source:"",
+          source: "",
           tech: "Vuejs, Django, Firebase",
-          desc:
-            "Simple searchable recipe website using VueJS and Django (custom API). Visuals, dynamically created recipe pages, authentication through Auth0, CRUD and image storage through Firebase storage buckets currently pending.",
+          desc: "Simple searchable recipe website using VueJS and Django (custom API). Visuals, dynamically created recipe pages, authentication through Auth0, CRUD and image storage through Firebase storage buckets currently pending.",
         },
         {
           id: 2,
@@ -67,10 +64,9 @@ export default {
           title: "Quasargram",
           link: "https://quasargram-89a89.firebaseapp.com/#/",
           img: "",
-          source:"https://github.com/antinomezco/fakestagram",
+          source: "https://github.com/antinomezco/fakestagram",
           tech: "Quasar (Vuejs), Express, NodeJS, Firebase",
-          desc:
-            "Simple Instagram look-alike page using a Vuejs (with Quasar) NodeJS Express. Allows for uploading of photos from the local file system or from the device's webcam if available. Features pending: multi-users, authentication through Auth0, deletion of posts",
+          desc: "Simple Instagram look-alike page using a Vuejs (with Quasar) NodeJS Express. Allows for uploading of photos from the local file system or from the device's webcam if available. Features pending: multi-users, authentication through Auth0, deletion of posts",
         },
         {
           id: 3,
@@ -78,11 +74,10 @@ export default {
           title: "Portfolio page",
           link: "https://www.csaldana.xyz",
           img: "",
-          source:"https://github.com/antinomezco/portfolio2021",
+          source: "https://github.com/antinomezco/portfolio2021",
           tech: "Vuejs, Gsap",
-          desc:
-            "Simple portfolio page using only HTML, CSS, Vuejs and Gsap for the animations",
-        }
+          desc: "Simple portfolio page using only HTML, CSS, Vuejs and Gsap for the animations",
+        },
       ],
     };
   },
@@ -95,35 +90,26 @@ export default {
     },
   },
   mounted() {
-    this.gsap.fromTo(this.$refs.projectNameContainer, { 
-      autoAlpha: 0,
-      x: -50,
-    },{
-      scrollTrigger: {
-      trigger: this.$refs.projectNameContainer,
-      start: "top center+=200px",
-      end: "top center+=100px",
-    },
-      duration: 1,
-      autoAlpha: 1,
-      x: 0,
+    const boxesAnim = this.gsap.utils.toArray(".boxes");
+    boxesAnim.forEach((box) => {
+      this.gsap.fromTo(
+        box,
+        {
+          autoAlpha: 0,
+          x: -50,
+        },
+        {
+          scrollTrigger: {
+            trigger: box,
+            start: "top center+=200px",
+            end: "top center+=100px",
+          },
+          duration: 1,
+          autoAlpha: 1,
+          x: 0,
+        }
+      );
     });
-    const boxesAnim = this.gsap.utils.toArray('.boxes')
-    boxesAnim.forEach(box => {
-      this.gsap.fromTo(box, {
-      autoAlpha: 0,
-      x: -50,
-    },{
-      scrollTrigger: {
-      trigger: box,
-      start: "top center+=200px",
-      end: "top center+=100px",
-    },
-      duration: 1,
-      autoAlpha: 1,
-      x: 0,
-    })
-    })
   },
 };
 </script>
@@ -154,13 +140,13 @@ img {
   width: 450px;
   border-radius: 1%;
   -webkit-box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
-          box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
 img:active {
   -webkit-transform: scale(0.99);
-      -ms-transform: scale(0.99);
-          transform: scale(0.99);
+  -ms-transform: scale(0.99);
+  transform: scale(0.99);
 }
 
 .live-demo {
@@ -168,7 +154,13 @@ img:active {
   margin-right: 6rem;
   width: auto;
   padding: 5px;
-  background: -webkit-gradient(linear, left top, right top, color-stop(50%, purple), color-stop(50%, white));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(50%, purple),
+    color-stop(50%, white)
+  );
   background: -o-linear-gradient(left, purple 50%, white 50%);
   background: linear-gradient(to right, purple 50%, white 50%);
   background-size: 200% 100%;
@@ -191,8 +183,8 @@ img:active {
 
 .live-demo:active {
   -webkit-transform: scale(0.99);
-      -ms-transform: scale(0.99);
-          transform: scale(0.99);
+  -ms-transform: scale(0.99);
+  transform: scale(0.99);
 }
 
 .live-demo,
@@ -211,12 +203,12 @@ img:active {
 }
 .source-code:hover {
   -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 .source-code:hover:active {
   -webkit-box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
-          box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
 .below-text-desc {
@@ -225,11 +217,11 @@ img:active {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-left: -2rem;
 }
 
@@ -243,8 +235,8 @@ img:active {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   margin-bottom: 5rem;
   margin-left: auto;
   margin-right: auto;
@@ -261,8 +253,8 @@ img:active {
   .full-box {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     width: 80%;
   }
 

@@ -4,11 +4,12 @@ Portfolio made in Vue.js, inspired by the SimpleFolio React template.
 
 https://github.com/cobidev/simplefolio
 
+Uses Vue Router and GSAP (for animations)
+
 Features to add
 
 1. Add comments to code
 2. Add I18n
-3. Improve animations
 
 ## Project setup
 ```

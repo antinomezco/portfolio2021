@@ -1,70 +1,65 @@
 <template>
   <div class="skills" id="skills">
-    <div class="skills-container" ref="skillsContainer">
-      <h2 class="title" >
-        Skills
-      </h2>
-      <h3>
-        My developer and tech skills
-      </h3>
+    <div class="skills-container" ref="animation">
+      <h2 class="title">Skills</h2>
+      <h3>My developer and tech skills</h3>
       <div class="skills-list-container">
-        <div v-for="skill in skills" :key="skill.name" class="skills-list">
+        <div v-for="skill in skills" :key="skill.title" class="skills-list">
           <a target="_blank" class="skills-list" :href="skill.web"
             ><img
-              :src="require(`../assets/${skill.name}.png`)"
+              :src="require(`../assets/${skill.title}.png`)"
               :alt="skill.alt"
               :title="skill.alt"
           /></a>
         </div>
       </div>
-      <div class="who-am-i" @click="scroll()">
-        Who am I?
-      </div>
+      <div class="who-am-i" @click="scroll()">Who am I?</div>
     </div>
   </div>
 </template>
 
 <script>
+import { animation } from "./mixins/animation";
 export default {
+  mixins: [animation],
   data() {
     return {
       comp: "skills",
       skills: [
         {
-          name: "js",
+          title: "js",
           alt: "JavaScript",
           web: "https://developer.mozilla.org/en-US/docs/Glossary/JavaScript",
         },
         {
-          name: "html",
+          title: "html",
           alt: "HTML5",
           web: "https://developer.mozilla.org/en-US/docs/Glossary/HTML5",
         },
         {
-          name: "css",
+          title: "css",
           alt: "CSS3",
           web: "https://developer.mozilla.org/en-US/docs/Glossary/CSS",
         },
-        { name: "vue", alt: "VueJS", web: "https://vuejs.org/v2/guide/" },
+        { title: "vue", alt: "VueJS", web: "https://vuejs.org/v2/guide/" },
         {
-          name: "node",
+          title: "node",
           alt: "NodeJS",
           web: "https://developer.mozilla.org/en-US/docs/Glossary/Node.js",
         },
-        { name: "expressjs", alt: "express", web: "https://expressjs.com/" },
-        // { name: "python", alt: "Python" },
+        { title: "expressjs", alt: "express", web: "https://expressjs.com/" },
         {
-          name: "django",
+          title: "django",
           alt: "Django",
           web: "https://learndjango.com/tutorials/what-django-python",
         },
-        { name: "prismic", alt: "Prismic", web: "https://prismic.io/" },
+        { title: "prismic", alt: "Prismic", web: "https://prismic.io/" },
         {
-          name: "postgres",
+          title: "postgres",
           alt: "Postgres",
           web: "https://www.postgresql.org/about/",
         },
-        { name: "git", alt: "git", web: "https://git-scm.com/" },
+        { title: "git", alt: "git", web: "https://git-scm.com/" },
       ],
     };
   },
@@ -74,25 +69,6 @@ export default {
         behavior: "smooth",
       });
     },
-  },
-  mounted() {
-    this.gsap.fromTo(
-      this.$refs.skillsContainer,
-      {
-        autoAlpha: 0,
-        x: -50,
-      },
-      {
-        scrollTrigger: {
-          trigger: this.$refs.skillsContainer,
-          start: "top center+=200px",
-          end: "top center+=100px",
-        },
-        duration: 1,
-        autoAlpha: 1,
-        x: 0,
-      }
-    );
   },
 };
 </script>
@@ -109,7 +85,7 @@ export default {
   background-color: orange;
   padding: 200px 0 100px;
   -webkit-clip-path: polygon(0 22%, 100% 0%, 100% 100%, 0 100%);
-          clip-path: polygon(0 22%, 100% 0%, 100% 100%, 0 100%);
+  clip-path: polygon(0 22%, 100% 0%, 100% 100%, 0 100%);
 }
 
 .title {
@@ -130,13 +106,13 @@ h3 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   padding-bottom: 2rem;
 }
 
@@ -152,11 +128,10 @@ h3 {
 @media only screen and (max-device-width: 1024px) {
   .skills-list-container {
     width: 80%;
-    justify-content: normal;
   }
   .skills {
     -webkit-clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
-            clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
     padding: 60px 0 100px;
   }
 }
@@ -165,20 +140,26 @@ img {
   -webkit-transition: all linear 0.1s;
   -o-transition: all linear 0.1s;
   transition: all linear 0.1s;
-  width:100px;
+  width: 100px;
 }
 
 img:hover {
   -webkit-transform: scale(1.01);
-      -ms-transform: scale(1.01);
-          transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  transform: scale(1.01);
 }
 
 .who-am-i {
   margin: auto;
   width: 110px;
   padding: 5px;
-  background: -webkit-gradient(linear, left top, right top, color-stop(50%, purple), color-stop(50%, white));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(50%, purple),
+    color-stop(50%, white)
+  );
   background: -o-linear-gradient(left, purple 50%, white 50%);
   background: linear-gradient(to right, purple 50%, white 50%);
   background-size: 200% 100%;
@@ -200,9 +181,9 @@ img:hover {
 
 .who-am-i:active {
   -webkit-transform: scale(0.99);
-      -ms-transform: scale(0.99);
-          transform: scale(0.99);
+  -ms-transform: scale(0.99);
+  transform: scale(0.99);
   -webkit-box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
-          box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 </style>

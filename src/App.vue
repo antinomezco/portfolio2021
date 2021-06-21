@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="main-content"  id="about">
+    <div class="main-content" id="about">
       <router-view />
     </div>
     <Footer />
@@ -13,7 +13,7 @@ import Footer from "@/components/Footer.vue";
 export default {
   name: "App",
   components: {
-    Footer
+    Footer,
   },
 };
 </script>
@@ -32,7 +32,7 @@ body {
   padding: 0;
   min-height: 100%;
   background: white;
-  font-family: 'Montserrat', 'Press Start 2P', 'Arvo',sans-serif;
+  font-family: "Montserrat", "Press Start 2P", "Arvo", sans-serif;
 }
 
 .main-content {
@@ -54,10 +54,10 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   padding-left: 1rem;
-  margin-top: 1rem
+  margin-top: 1rem;
 }
 
 .links {
@@ -71,9 +71,9 @@ body {
 @media only screen and (max-width: 600px) {
   .links {
     opacity: 0;
-    -webkit-transition: all .25s;
-    -o-transition: all .25s;
-    transition: all .25s;
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s;
     visibility: hidden;
   }
 }

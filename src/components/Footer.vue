@@ -7,13 +7,20 @@
         </div>
       </div>
       <div class="navy-footer">
-        <a :href=bottomLink.href target="_blank" v-for="bottomLink in bottomLinks" :key=bottomLink.title
-          ><img class="links-footer" :src="require(`../assets/${bottomLink.srcImage}.png`)" :title=bottomLink.title
+        <a
+          :href="bottomLink.href"
+          target="_blank"
+          v-for="bottomLink in bottomLinks"
+          :key="bottomLink.title"
+          ><img
+            class="links-footer"
+            :src="require(`../assets/${bottomLink.srcImage}.png`)"
+            :title="bottomLink.title"
         /></a>
       </div>
       <hr />
       <div class="footer-name">
-        <p>© 2021 - Constantino Saldana</p>
+        <p>{{ madeBy }}</p>
       </div>
     </div>
   </div>
@@ -22,13 +29,26 @@
 <script>
 export default {
   data() {
-    return { 
+    return {
+      madeBy: "© 2021 - Constantino Saldana",
       bottomLinks: [
-        {title: "Github", srcImage: "github", href: "https://github.com/antinomezco"},
-        {title: "Resumé", srcImage: "cv", href: "https://drive.google.com/file/d/1j8Tsc7AGqAvY_QPRSnIY-d7QFMdKAGyx/view?usp=sharing"},
-        {title: "LinkedIn", srcImage: "linkedin", href: "https://www.linkedin.com/in/constantinosaldana/?locale=en_US"},
-      ]
-    }
+        {
+          title: "Github",
+          srcImage: "github",
+          href: "https://github.com/antinomezco",
+        },
+        {
+          title: "Resumé",
+          srcImage: "cv",
+          href: "https://drive.google.com/file/d/1j8Tsc7AGqAvY_QPRSnIY-d7QFMdKAGyx/view?usp=sharing",
+        },
+        {
+          title: "LinkedIn",
+          srcImage: "linkedin",
+          href: "https://www.linkedin.com/in/constantinosaldana/?locale=en_US",
+        },
+      ],
+    };
   },
   methods: {
     scroll() {
@@ -53,8 +73,8 @@ export default {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background-color: black;
   height: 275px;
   width: 100%;
@@ -64,16 +84,16 @@ export default {
 .container {
   width: 300px;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin: 0 auto;
 }
 
 hr {
   margin-top: 1rem;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   color: #2c3e50;
 }
 
@@ -83,8 +103,8 @@ hr {
   display: flex;
   flex-direction: row;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
 }
 
 .links-footer {
@@ -105,8 +125,8 @@ hr {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding-bottom: 1rem;
 }
 
@@ -121,14 +141,14 @@ hr {
 
 .footer-top:hover {
   -webkit-transform: translateY(-2px);
-      -ms-transform: translateY(-2px);
-          transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
 .links-footer:hover {
   -webkit-transform: translateY(-2px);
-      -ms-transform: translateY(-2px);
-          transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
 .footer-name {
@@ -137,8 +157,8 @@ hr {
   font-size: 75%;
   width: 300px;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin: 0 auto;
 }
 </style>
