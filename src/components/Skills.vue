@@ -24,7 +24,6 @@ export default {
   mixins: [animation],
   data() {
     return {
-      comp: "skills",
       skills: [
         {
           title: "js",
@@ -65,6 +64,7 @@ export default {
   },
   methods: {
     scroll() {
+      //scrolls to the following component, hero
       document.getElementById("hero").scrollIntoView({
         behavior: "smooth",
       });

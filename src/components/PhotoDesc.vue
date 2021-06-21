@@ -19,7 +19,6 @@ export default {
   mixins: [animation],
   data() {
     return {
-      cv: "https://drive.google.com/file/d/1j8Tsc7AGqAvY_QPRSnIY-d7QFMdKAGyx/view?usp=sharing",
       desc: "I'm Constantino, a trilingual (English, French and Spanish) Full Stack developer based in Montreal, specializing in web development using VueJS as a frontend alongside Django or Express as an API backend, as well as a translator.",
     };
   },

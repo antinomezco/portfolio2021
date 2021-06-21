@@ -40,11 +40,7 @@
 <script>
 import { animation } from "./mixins/animation";
 export default {
-  name: "ProjectsWorld",
   mixins: [animation],
-  props: {
-    msg: String,
-  },
   data() {
     return {
       boxes: [
@@ -80,14 +76,6 @@ export default {
         },
       ],
     };
-  },
-  computed: {
-    pageImage() {
-      if (!this.boxes.name) {
-        return "logo";
-      }
-      return "nothing";
-    },
   },
   mounted() {
     const boxesAnim = this.gsap.utils.toArray(".boxes");
