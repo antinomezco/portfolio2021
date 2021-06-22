@@ -137,6 +137,11 @@ img {
   height: 275px;
   width: 450px;
   border-radius: 1%;
+  transition: all ease-in 0.25s;
+  border: solid 1px gray;
+}
+
+img:hover {
   -webkit-box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
   box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
