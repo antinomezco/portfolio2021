@@ -8,8 +8,8 @@ Uses Vue Router and GSAP (for animations)
 
 Features to add
 
-1. Add comments to code
-2. Add I18n
+1. Comments (where needed for clarification)
+2. I18n
 
 ## Project setup
 ```
