@@ -52,7 +52,7 @@ export default {
           img: "",
           source: "",
           tech: "Vuejs, Firebase",
-          desc: "Simple searchable recipe website using VueJS. Visuals, dynamically created recipe pages, authentication through Auth0, CRUD and image storage through Firebase storage buckets currently pending.",
+          desc: "Simple searchable recipe website using VueJS. Dynamically created recipe pages, authentication through Auth0, CRUD and image storage through Firebase storage buckets currently pending.",
         },
         {
           id: 2,
@@ -62,7 +62,7 @@ export default {
           img: "",
           source: "https://github.com/antinomezco/cookingdb",
           tech: "Django, Postgres, Rest",
-          desc: "Django API for use in the Recipe Database (frontend). Allows for REST connection for recipes, category of recipe and ingredients",
+          desc: "Django API for use in the Recipe Database (frontend). Allows for REST CRUD connection for users and recipes.",
         },
         {
           id: 3,
