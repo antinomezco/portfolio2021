@@ -50,9 +50,9 @@ export default {
           title: "Recipe Database (frontend)",
           link: "https://agitated-hermann-0d809c.netlify.app/",
           img: "",
-          source: "",
+          source: "https://github.com/antinomezco/calaveria",
           tech: "Vuejs, Firebase",
-          desc: "Simple searchable recipe website using VueJS. Dynamically created recipe pages, authentication through Auth0, CRUD and image storage through Firebase storage buckets currently pending.",
+          desc: "Simple searchable recipe website using VueJS with authentication through Auth0. Dynamically created recipe pages, CRUD and image storage through Firebase storage buckets currently pending.",
         },
         {
           id: 2,
@@ -66,16 +66,6 @@ export default {
         },
         {
           id: 3,
-          name: "quasargram",
-          title: "Quasargram",
-          link: "https://quasargram-89a89.firebaseapp.com/#/",
-          img: "",
-          source: "https://github.com/antinomezco/fakestagram",
-          tech: "Quasar (Vuejs), Express, NodeJS, Firebase",
-          desc: "Simple Instagram look-alike page using a Vuejs (with Quasar) NodeJS Express. Allows for uploading of photos from the local file system or from the device's webcam if available. Features pending: multi-users, authentication through Auth0, deletion of posts",
-        },
-        {
-          id: 4,
           name: "portfolio",
           title: "Portfolio page",
           link: "https://www.csaldana.xyz",
