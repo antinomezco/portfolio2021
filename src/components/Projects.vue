@@ -51,8 +51,8 @@ export default {
           link: "https://agitated-hermann-0d809c.netlify.app/",
           img: "",
           source: "https://github.com/antinomezco/calaveria",
-          tech: "Vuejs, Firebase",
-          desc: "Simple searchable recipe website using VueJS with authentication through Auth0. Dynamically created recipe pages, CRUD and image storage through Firebase storage buckets currently pending.",
+          tech: "Vuejs, Firebase, Auth0",
+          desc: "Simple searchable recipe website using VueJS with authentication through Auth0. Dynamically created recipe pages available. CRUD and image storage through Firebase storage buckets currently pending.",
         },
         {
           id: 2,

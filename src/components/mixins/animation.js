@@ -7,7 +7,8 @@ gsap.registerPlugin(ScrollTrigger);
 export const animation = {
   mounted() {
     this.gsap.fromTo(
-      //target element, when this element is in a certain position in the windows, the animation below will trigger
+      //target element, when this element is in a certain position in the windows, 
+      //the animation below will trigger
       this.$refs.animation,
       {
         //initial state, or starting point for the animation
@@ -17,11 +18,13 @@ export const animation = {
       {
         //final state of the animation
         scrollTrigger: {
-          //when the trigger is 200px above the middle of the screen the animation starts
+          //when the trigger is 200px above the middle of the screen
+          //the animation starts
           trigger: this.$refs.animation,
           start: "top center+=200px",
         },
-        //how much the animation lasts, the amount of autoAlpha 0 to 1 and it's x position relative to what its CSS dictates
+        //how much the animation lasts, the amount of autoAlpha 0 to 1 
+        //and it's x position relative to what its CSS dictates
         duration: 1,
         autoAlpha: 1,
         x: 0,
