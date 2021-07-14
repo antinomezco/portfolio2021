@@ -1,7 +1,7 @@
 <template>
   <div class="Projects" id="projects" ref="animation">
     <div class="container">
-      <h3>Projects</h3>
+      <h3>Projects or contributions</h3>
       <div v-for="box in boxes" :key="box.name" class="boxes">
         <div class="full-box">
           <div class="left-box">
@@ -72,7 +72,17 @@ export default {
           img: "",
           source: "https://github.com/antinomezco/portfolio2021",
           tech: "Vuejs, Gsap",
-          desc: "Simple portfolio page using only HTML, CSS, Vuejs and Gsap for the animations",
+          desc: "Simple portfolio page using only HTML, CSS, Vuejs and Gsap for the animations.",
+        },
+        {
+          id: 4,
+          name: "vuetify",
+          title: "Vuetify documentation",
+          link: "https://vuetifyjs.com/",
+          img: "",
+          source: "",
+          tech: "None",
+          desc: "Spanish documentation translation for the Vuetify component library v3.",
         },
       ],
     };

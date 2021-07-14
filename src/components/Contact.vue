@@ -14,7 +14,7 @@ export default {
   mixins: [animation],
   data() {
     return {
-      email: "mailto:csaldanawebdev@gmail.com",
+      email: "mailto:info@csaldana.xyz",
     };
   },
 };
