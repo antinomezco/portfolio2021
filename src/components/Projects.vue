@@ -1,7 +1,7 @@
 <template>
   <div class="Projects" id="projects" ref="animation">
     <div class="container">
-      <h3>Projects or contributions</h3>
+      <h3>Projects/Contributions</h3>
       <div v-for="box in boxes" :key="box.name" class="boxes">
         <div class="full-box">
           <div class="left-box">
@@ -17,19 +17,22 @@
               </p>
             </div>
             <div class="below-text-desc">
-              <a class="live-demo" :href="box.link" target="_blank"
-                >Live demo</a
-              >
-              <a class="source-code" :href="box.source" target="_blank"
-                >Source Code</a
-              >
+              <div v-if="box.link">
+                <a class="live-demo" :href="box.link" target="_blank"
+                  >Live demo</a
+                >
+              </div>
+              <div v-if="box.source">
+                <a class="source-code" :href="box.source" target="_blank"
+                  >Source Code</a
+                >
+              </div>
             </div>
           </div>
           <div class="right-box">
             <a :href="box.link" target="_blank"
               ><img :src="require(`../assets/${box.name}.png`)" alt=""
             /></a>
-            <!-- <img src="../assets/recipe.png" alt=""> -->
           </div>
         </div>
       </div>
@@ -78,11 +81,21 @@ export default {
           id: 4,
           name: "vuetify",
           title: "Vuetify documentation",
-          link: "https://vuetifyjs.com/",
+          link: "",
           img: "",
           source: "",
           tech: "None",
-          desc: "Spanish documentation translation for the Vuetify component library v3.",
+          desc: "Ongoing Spanish documentation translation for the Vuetify component library v3.",
+        },
+        {
+          id: 5,
+          name: "montreal-greeters",
+          title: "Montreal Greeters",
+          link: "",
+          img: "",
+          source: "",
+          tech: "None",
+          desc: "Web development assistance for the Montreal Greeters webpage.",
         },
       ],
     };

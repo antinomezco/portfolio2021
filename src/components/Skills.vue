@@ -59,6 +59,13 @@ export default {
           web: "https://www.postgresql.org/about/",
         },
         { title: "git", alt: "git", web: "https://git-scm.com/" },
+        { title: "snipcart", alt: "snipcart", web: "https://snipcart.com/" },
+        { title: "strapi", alt: "strapi", web: "https://strapi.io/" },
+        {
+          title: "divi",
+          alt: "divi",
+          web: "https://www.elegantthemes.com/gallery/divi/",
+        },
       ],
     };
   },
