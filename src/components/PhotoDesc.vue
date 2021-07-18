@@ -1,5 +1,5 @@
 <template>
-  <div class="hero" id="hero">
+  <section class="hero" id="hero">
     <div class="hero-container" ref="animation">
       <h2 class="who-am-i">Who am I?</h2>
       <div class="who-am-i-container">
@@ -10,7 +10,7 @@
       </div>
       <div class="projects-link" @click="scroll()">Check out my projects</div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -113,7 +113,7 @@ p {
 .who-am-i {
   font-size: 200%;
   color: purple;
-  padding-bottom: 50px;
+  padding-bottom: 5rem;
   font-family: Montserrat;
 }
 

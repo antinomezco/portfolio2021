@@ -1,5 +1,5 @@
 <template>
-  <div class="skills" id="skills">
+  <section class="skills" id="skills">
     <div class="skills-container" ref="animation">
       <h2 class="title">Skills</h2>
       <h3>My developer and tech skills</h3>
@@ -15,7 +15,7 @@
       </div>
       <div class="who-am-i" @click="scroll()">Who am I?</div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -59,13 +59,6 @@ export default {
           web: "https://www.postgresql.org/about/",
         },
         { title: "git", alt: "git", web: "https://git-scm.com/" },
-        { title: "snipcart", alt: "snipcart", web: "https://snipcart.com/" },
-        { title: "strapi", alt: "strapi", web: "https://strapi.io/" },
-        {
-          title: "divi",
-          alt: "divi",
-          web: "https://www.elegantthemes.com/gallery/divi/",
-        },
       ],
     };
   },
@@ -106,7 +99,7 @@ h3 {
 }
 
 .skills-list-container {
-  width: 50%;
+  width: 795px;
   margin-left: auto;
   margin-right: auto;
   display: -webkit-box;
@@ -120,14 +113,14 @@ h3 {
   align-items: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding-bottom: 2rem;
+  padding-bottom: 5rem;
 }
 
 .skills-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 1rem;
+  margin: 1rem auto;
   width: 100px;
   height: 100px;
 }

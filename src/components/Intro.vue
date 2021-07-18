@@ -1,5 +1,5 @@
 <template>
-  <div class="intro">
+  <section class="intro">
     <div class="intro-container" ref="animation">
       <div class="name-container">
         Hello, my name is <span class="name">Constantino Saldana</span>, web
@@ -9,7 +9,7 @@
         Would you like to know more?
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

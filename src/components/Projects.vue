@@ -1,7 +1,7 @@
 <template>
-  <div class="Projects" id="projects" ref="animation">
+  <section class="Projects" id="projects" ref="animation">
     <div class="container">
-      <h3>Projects/Contributions</h3>
+      <h3>Projects or Contributions</h3>
       <div v-for="box in boxes" :key="box.name" class="boxes">
         <div class="full-box">
           <div class="left-box">
@@ -37,7 +37,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

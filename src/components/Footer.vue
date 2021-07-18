@@ -1,5 +1,5 @@
 <template>
-  <div class="footer">
+  <section class="footer">
     <div class="container">
       <div class="top">
         <div @click="scroll()" class="footer-top-container">
@@ -23,7 +23,7 @@
         <p>{{ madeBy }}</p>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

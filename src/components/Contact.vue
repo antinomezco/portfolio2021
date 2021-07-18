@@ -1,11 +1,11 @@
 <template>
-  <div class="contact" id="contact">
+  <section class="contact" id="contact">
     <div class="container" ref="animation">
       <h2>Contact</h2>
       <p>Want to work with me?</p>
       <a :href="email" class="sendMessage">Send me a message</a>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
