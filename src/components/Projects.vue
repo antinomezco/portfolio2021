@@ -282,6 +282,12 @@ img:active {
     padding-top: 0;
   }
 
+  .text-desc,
+  .below-text-desc {
+    width: 300px;
+    margin: auto;
+  }
+
   img {
     width: 100%;
     max-width: 450px;
