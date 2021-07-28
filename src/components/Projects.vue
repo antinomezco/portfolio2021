@@ -55,7 +55,7 @@ export default {
           img: "",
           source: "https://github.com/antinomezco/calaveria",
           tech: "Vuejs, Firebase, Auth0",
-          desc: "Simple searchable recipe website using VueJS with authentication through Auth0. Dynamically created recipe pages, CRUD and image storage through Firebase storage buckets available.",
+          desc: "I love cooking, so I created a simple searchable recipe website for myself so I can store my favorite recipes and share them with my friends/family. Website was made using VueJS with authentication through Auth0. Dynamically created recipe pages, CRUD and image storage through Firebase storage buckets available.",
         },
         {
           id: 2,
@@ -65,7 +65,7 @@ export default {
           img: "",
           source: "https://github.com/antinomezco/cookingdb",
           tech: "Django, Postgres, Rest",
-          desc: "Django API for use in the Recipe Database (frontend). Allows for REST CRUD connection for users and recipes.",
+          desc: "I wanted a place to store my recipes and not have them fixed in code, so I used Django API for use in the Recipe Database (frontend) since Python is easy to understand. Allows for REST CRUD connection for users and recipes.",
         },
         {
           id: 3,
@@ -75,7 +75,7 @@ export default {
           img: "",
           source: "https://github.com/antinomezco/portfolio2021",
           tech: "Vuejs, Gsap",
-          desc: "Simple portfolio page using only HTML, CSS, Vuejs and Gsap for the animations.",
+          desc: "I wanted a simple portfolio page to show my skills using only HTML, CSS, Vuejs and Gsap for the animations.",
         },
         {
           id: 4,
