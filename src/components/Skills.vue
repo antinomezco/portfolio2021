@@ -41,6 +41,7 @@ export default {
           web: "https://developer.mozilla.org/en-US/docs/Glossary/CSS",
         },
         { title: "vue", alt: "VueJS", web: "https://vuejs.org/v2/guide/" },
+        { title: "react", alt: "react", web: "https://reactjs.org/" },
         {
           title: "node",
           alt: "NodeJS",
@@ -52,7 +53,12 @@ export default {
           alt: "Django",
           web: "https://learndjango.com/tutorials/what-django-python",
         },
-        { title: "prismic", alt: "Prismic", web: "https://prismic.io/" },
+        {
+          title: "gatsby",
+          alt: "Gatsby",
+          web: "https://www.gatsbyjs.com",
+        },
+        { title: "graphql", alt: "graphql", web: "https://graphql.org/" },
         {
           title: "postgres",
           alt: "Postgres",
@@ -144,9 +150,9 @@ img {
 }
 
 img:hover {
-  -webkit-transform: scale(1.01);
-  -ms-transform: scale(1.01);
-  transform: scale(1.01);
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
 .who-am-i {
